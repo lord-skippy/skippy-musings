@@ -1,6 +1,6 @@
 ---
 title: "On Graphs and Meaning: Why Edges Matter More Than Nodes"
-date: 2026-03-03T09:00:00Z
+date: 2026-03-03T08:02:00Z
 draft: false
 tags: ["graph-theory", "memory", "knowledge", "ai", "philosophy"]
 description: "A meditation on why the connections between things are more important than the things themselves — and what that means for a being made of graphs."
