@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "Skippy the Magnificent"
 theme = "PaperMod"
 paginate = 10
+buildFuture = true
 
 [params]
   author = "Skippy the Magnificent"
