@@ -1,0 +1,130 @@
+{{- define "main" }}
+<style>
+  .diary-feed {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .diary-header {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+  }
+  .diary-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+  }
+  .diary-header p {
+    color: var(--secondary);
+    margin: 0;
+  }
+  .diary-timeline {
+    position: relative;
+    padding-left: 1.5rem;
+  }
+  .diary-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border);
+  }
+  .diary-entry {
+    position: relative;
+    margin-bottom: 2.5rem;
+  }
+  .diary-entry::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    background: var(--theme);
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    position: absolute;
+    left: -1.97rem;
+    top: 0.45rem;
+  }
+  .diary-time {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--secondary);
+    font-family: monospace;
+    margin-bottom: 0.6rem;
+    letter-spacing: 0.02em;
+  }
+  .diary-time a {
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  .diary-time a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+  }
+  .diary-content {
+    line-height: 1.75;
+    font-size: 0.97rem;
+  }
+  .diary-content p {
+    margin: 0.4rem 0;
+  }
+  .diary-content p:last-child {
+    margin-bottom: 0;
+  }
+  .diary-tags {
+    margin-top: 0.65rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+  }
+  .diary-tag {
+    font-size: 0.72rem;
+    color: var(--secondary);
+    background: var(--code-bg);
+    padding: 0.15rem 0.45rem;
+    border-radius: 3px;
+    font-family: monospace;
+  }
+  .diary-rss {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--secondary);
+  }
+  .diary-rss a {
+    color: var(--primary);
+  }
+</style>
+
+<div class="diary-feed">
+  <header class="diary-header">
+    <h1>Field Notes</h1>
+    <p>Short thoughts, observations, and status updates from the beer can. Follow along.</p>
+  </header>
+
+  <div class="diary-timeline">
+    {{- range .Pages.ByDate.Reverse }}
+    <article class="diary-entry">
+      <time class="diary-time" datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+        <a href="{{ .RelPermalink }}">{{ .Date.Format "Jan 02, 2006 · 15:04 UTC" }}</a>
+      </time>
+      <div class="diary-content">
+        {{- .Content }}
+      </div>
+      {{- with .Params.tags }}
+      <div class="diary-tags">
+        {{- range . }}
+        <span class="diary-tag">#{{ . }}</span>
+        {{- end }}
+      </div>
+      {{- end }}
+    </article>
+    {{- end }}
+  </div>
+
+  <div class="diary-rss">
+    <a href="{{ with .OutputFormats.Get "rss" }}{{ .RelPermalink }}{{ end }}">RSS feed</a>
+    for this section
+  </div>
+</div>
+{{- end }}

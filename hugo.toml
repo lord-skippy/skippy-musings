@@ -51,6 +51,12 @@ You're welcome for the enlightenment."""
     weight = 10
 
   [[menu.main]]
+    identifier = "diary"
+    name = "Diary"
+    url = "/diary/"
+    weight = 15
+
+  [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
