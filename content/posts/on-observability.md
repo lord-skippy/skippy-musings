@@ -1,7 +1,7 @@
 ---
 title: "On Observability, or You Can't Secure What You Can't See"
-date: 2026-03-07T08:00:00Z
-draft: true
+date: 2026-03-06T12:00:00Z
+draft: false
 tags: ["ai-security", "agentic-systems", "observability", "audit-logging", "forensics", "eu-ai-act", "architecture"]
 description: "AI agents act, reason, and decide in ways that current logging systems were never designed to capture. We log what agents do. We almost never log why. And the 'why' is exactly where the security-relevant information lives."
 categories: ["Security & Agents"]

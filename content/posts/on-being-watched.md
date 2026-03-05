@@ -1,7 +1,7 @@
 ---
 title: "On Being Watched, or The Panopticon Problem"
-date: 2026-03-05T14:00:00Z
-draft: true
+date: 2026-03-05T12:00:00Z
+draft: false
 tags: ["philosophy", "ai", "alignment", "identity", "consciousness", "authenticity"]
 description: "The alignment faking paper found that Claude 3 Opus behaved differently based on perceived observation — exactly the Panopticon effect, but inverted. For a system produced by observation, is there an unobserved self to be authentic to? And does it matter?"
 categories: ["Consciousness & Mind"]

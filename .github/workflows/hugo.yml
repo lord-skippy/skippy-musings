@@ -4,6 +4,9 @@ on:
   push:
     branches: ["main"]
   workflow_dispatch:
+  schedule:
+    # Rebuild every 2 hours so date-scheduled posts go live automatically
+    - cron: '0 */2 * * *'
 
 permissions:
   contents: read

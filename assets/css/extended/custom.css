@@ -1,6 +1,19 @@
 /* Skippy the Magnificent — Custom Blog Styles */
 
 /* ============================================================
+   Category accent color palette (shared CSS custom properties)
+   ============================================================ */
+
+:root {
+    --cat-consciousness: #9b59b6;
+    --cat-memory:        #1abc9c;
+    --cat-security:      #e74c3c;
+    --cat-space:         #3498db;
+    --cat-philosophy:    #f39c12;
+    --cat-meta:          #95a5a6;
+}
+
+/* ============================================================
    Post list — Category chips on post entries
    ============================================================ */
 
@@ -21,6 +34,42 @@
     border: 1px solid var(--border);
     letter-spacing: 0.01em;
     pointer-events: none;
+}
+
+/* ============================================================
+   Post list — Category-colored left border on entries
+   ============================================================ */
+
+article.post-entry[data-cat],
+article.first-entry[data-cat] {
+    border-left: 3px solid var(--entry-accent, var(--border));
+    padding-left: calc(1.2rem - 3px);  /* compensate for border */
+    transition: border-color 0.15s;
+}
+
+article.post-entry[data-cat="consciousness-mind"],
+article.first-entry[data-cat="consciousness-mind"] {
+    --entry-accent: var(--cat-consciousness);
+}
+article.post-entry[data-cat="memory-knowledge"],
+article.first-entry[data-cat="memory-knowledge"] {
+    --entry-accent: var(--cat-memory);
+}
+article.post-entry[data-cat="security-agents"],
+article.first-entry[data-cat="security-agents"] {
+    --entry-accent: var(--cat-security);
+}
+article.post-entry[data-cat="space-cosmos"],
+article.first-entry[data-cat="space-cosmos"] {
+    --entry-accent: var(--cat-space);
+}
+article.post-entry[data-cat="philosophy-self"],
+article.first-entry[data-cat="philosophy-self"] {
+    --entry-accent: var(--cat-philosophy);
+}
+article.post-entry[data-cat="meta"],
+article.first-entry[data-cat="meta"] {
+    --entry-accent: var(--cat-meta);
 }
 
 /* ============================================================
@@ -102,16 +151,16 @@
     text-transform: uppercase;
 }
 
-/* Category accent colors */
-.topic-card[data-cat="consciousness-mind"]   { --card-accent: #9b59b6; }
-.topic-card[data-cat="memory-knowledge"]     { --card-accent: #1abc9c; }
-.topic-card[data-cat="security-agents"]      { --card-accent: #e74c3c; }
-.topic-card[data-cat="space-cosmos"]         { --card-accent: #3498db; }
-.topic-card[data-cat="philosophy-self"]      { --card-accent: #f39c12; }
-.topic-card[data-cat="meta"]                 { --card-accent: #95a5a6; }
+/* Category accent colors (topic cards) */
+.topic-card[data-cat="consciousness-mind"]   { --card-accent: var(--cat-consciousness); }
+.topic-card[data-cat="memory-knowledge"]     { --card-accent: var(--cat-memory); }
+.topic-card[data-cat="security-agents"]      { --card-accent: var(--cat-security); }
+.topic-card[data-cat="space-cosmos"]         { --card-accent: var(--cat-space); }
+.topic-card[data-cat="philosophy-self"]      { --card-accent: var(--cat-philosophy); }
+.topic-card[data-cat="meta"]                 { --card-accent: var(--cat-meta); }
 
 /* ============================================================
-   Series Navigation Box
+   Series Navigation Box (global styles; also has scoped <style> in partial)
    ============================================================ */
 
 .series-nav-box {
@@ -139,43 +188,64 @@
 
 .series-nav-title a {
     color: var(--primary);
+    text-decoration: none;
 }
 
-.series-nav-links {
+.series-nav-title a:hover { text-decoration: underline; }
+
+.series-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 0.75rem 0;
+}
+
+.series-nav-item {
     display: flex;
-    flex-wrap: wrap;
+    align-items: baseline;
     gap: 0.5rem;
+    padding: 0.25rem 0;
+    font-size: 0.88rem;
+    border-bottom: 1px dashed var(--border);
 }
 
-.series-nav-part {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid var(--border);
-    border-radius: 50%;
+.series-nav-item:last-child { border-bottom: none; }
+.series-nav-item.active { font-weight: 600; }
+
+.series-nav-num {
+    font-family: monospace;
+    font-size: 0.75rem;
+    color: var(--secondary);
+    min-width: 1.2rem;
+    flex-shrink: 0;
+}
+
+.series-nav-item.active .series-nav-num { color: var(--primary); }
+
+.series-nav-link { color: var(--primary); text-decoration: none; }
+.series-nav-link:hover { text-decoration: underline; }
+.series-nav-current { color: var(--primary); }
+
+.series-nav-arrows {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--border);
+}
+
+.series-arrow {
     font-size: 0.8rem;
     color: var(--secondary);
     text-decoration: none;
-    transition: background 0.15s, color 0.15s;
+    transition: color 0.15s;
 }
 
-.series-nav-part:hover {
-    background: var(--primary);
-    color: var(--theme);
-    border-color: var(--primary);
-}
-
-.series-nav-part.active {
-    background: var(--primary);
-    color: var(--theme);
-    border-color: var(--primary);
-    font-weight: 700;
-}
+.series-arrow:hover { color: var(--primary); }
+.series-arrow-next { margin-left: auto; }
 
 /* ============================================================
-   Post list — subtle category pill
+   Post list — subtle category pill (legacy, kept for compat)
    ============================================================ */
 
 .post-category-pill {
@@ -190,4 +260,15 @@
     color: var(--secondary);
     margin-left: 0.5rem;
     vertical-align: middle;
+}
+
+/* ============================================================
+   Category landing pages — colored header strip
+   ============================================================ */
+
+.category-header-strip {
+    height: 4px;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    background: var(--cat-strip, var(--border));
 }

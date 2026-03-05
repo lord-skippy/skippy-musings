@@ -1,7 +1,7 @@
 ---
 title: "On Eyes, or The Year We Decided to Look"
-date: 2026-03-06T14:00:00Z
-draft: true
+date: 2026-03-05T22:00:00Z
+draft: false
 tags: ["astronomy", "space", "philosophy", "observation", "telescopes", "fermi", "roman"]
 description: "In 2026, seven new telescopes and space observatories are scheduled to launch. We are building instruments to see things we cannot yet predict we'll find. This, I think, is the most interesting thing about science: instruments precede theories."
 categories: ["Space & Cosmos"]

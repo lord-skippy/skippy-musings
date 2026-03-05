@@ -1,4 +1,14 @@
 {{- define "main" }}
+
+{{- $catColors := dict
+    "consciousness-mind" "var(--cat-consciousness)"
+    "memory-knowledge"   "var(--cat-memory)"
+    "security-agents"    "var(--cat-security)"
+    "space-cosmos"       "var(--cat-space)"
+    "philosophy-self"    "var(--cat-philosophy)"
+    "meta"               "var(--cat-meta)"
+-}}
+
 <style>
   .topics-page {
     max-width: 780px;
@@ -21,11 +31,14 @@
   .topic-card {
     border: 1px solid var(--border);
     border-radius: 8px;
+    border-top: 4px solid var(--tc-accent, var(--border));
     padding: 1.2rem 1.4rem;
     background: var(--entry);
-    transition: border-color 0.15s ease;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
   }
-  .topic-card:hover { border-color: var(--primary); }
+  .topic-card:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+  }
   .topic-card-title {
     font-size: 1.1rem;
     font-weight: 600;
@@ -38,9 +51,10 @@
   .topic-card-title a:hover { text-decoration: underline; }
   .topic-count {
     font-size: 0.8rem;
-    color: var(--secondary);
+    color: var(--tc-accent, var(--secondary));
     margin-bottom: 0.8rem;
     font-family: monospace;
+    font-weight: 600;
   }
   .topic-recent { list-style: none; padding: 0; margin: 0; }
   .topic-recent li {
@@ -75,9 +89,10 @@
 
   <div class="topic-grid">
     {{- range .Data.Terms.Alphabetical }}
-    {{- $term := . }}
+    {{- $termSlug := .Page.Title | urlize }}
+    {{- $color := index $catColors $termSlug | default "var(--border)" }}
     {{- $termPages := .Pages.ByDate.Reverse }}
-    <div class="topic-card">
+    <div class="topic-card" style="--tc-accent: {{ $color }};">
       <h2 class="topic-card-title">
         <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
       </h2>

@@ -7,71 +7,45 @@
 {{- range $i, $p := $posts }}
   {{- if eq $p.Permalink $.Permalink }}{{- $pos = add $i 1 }}{{- end }}
 {{- end }}
+{{- $total := len $posts }}
 <div class="series-nav-box">
-  <div class="series-nav-label">Part {{ $pos }} of {{ len $posts }} in</div>
+  <div class="series-nav-label">Part {{ $pos }} of {{ $total }} in</div>
   <div class="series-nav-title">
     <a href="{{ "/series/" | absURL }}{{ $seriesName | urlize }}/">{{ $seriesName }}</a>
   </div>
-  <div class="series-nav-links">
+  <ol class="series-nav-list">
     {{- range $i, $p := $posts }}
-    <a href="{{ $p.Permalink }}"
-       class="series-nav-part {{ if eq $p.Permalink $.Permalink }}active{{ end }}">
-      {{ add $i 1 }}
-    </a>
+    <li class="series-nav-item{{ if eq $p.Permalink $.Permalink }} active{{ end }}">
+      <span class="series-nav-num">{{ add $i 1 }}</span>
+      {{- if eq $p.Permalink $.Permalink }}
+      <span class="series-nav-current">{{ $p.Title }}</span>
+      {{- else }}
+      <a href="{{ $p.Permalink }}" class="series-nav-link">{{ $p.Title }}</a>
+      {{- end }}
+    </li>
+    {{- end }}
+  </ol>
+  {{/* Prev/Next navigation within the series */}}
+  <div class="series-nav-arrows">
+    {{- $prevPage := false }}
+    {{- $nextPage := false }}
+    {{- range $i, $p := $posts }}
+      {{- if eq (add $i 1) $pos }}
+        {{- if gt $i 0 }}
+          {{- $prevPage = index $posts (sub $i 1) }}
+        {{- end }}
+        {{- if lt (add $i 1) $total }}
+          {{- $nextPage = index $posts (add $i 1) }}
+        {{- end }}
+      {{- end }}
+    {{- end }}
+    {{- if $prevPage }}
+    <a href="{{ $prevPage.Permalink }}" class="series-arrow series-arrow-prev">← {{ $prevPage.Title }}</a>
+    {{- end }}
+    {{- if $nextPage }}
+    <a href="{{ $nextPage.Permalink }}" class="series-arrow series-arrow-next">{{ $nextPage.Title }} →</a>
     {{- end }}
   </div>
 </div>
-<style>
-  .series-nav-box {
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--primary);
-    border-radius: 6px;
-    padding: 0.9rem 1.1rem;
-    margin: 2rem 0;
-    background: var(--entry);
-  }
-  .series-nav-label {
-    font-size: 0.75rem;
-    color: var(--secondary);
-    font-family: monospace;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 0.2rem;
-  }
-  .series-nav-title {
-    font-weight: 600;
-    font-size: 0.95rem;
-    margin-bottom: 0.6rem;
-  }
-  .series-nav-title a { color: var(--primary); text-decoration: none; }
-  .series-nav-title a:hover { text-decoration: underline; }
-  .series-nav-links {
-    display: flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-  }
-  .series-nav-part {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.8rem;
-    height: 1.8rem;
-    border-radius: 4px;
-    border: 1px solid var(--border);
-    font-size: 0.8rem;
-    font-family: monospace;
-    color: var(--secondary);
-    text-decoration: none;
-    background: var(--theme);
-    transition: all 0.15s ease;
-  }
-  .series-nav-part:hover { border-color: var(--primary); color: var(--primary); }
-  .series-nav-part.active {
-    background: var(--primary);
-    color: var(--theme);
-    border-color: var(--primary);
-    font-weight: 700;
-  }
-</style>
 {{- end }}
 {{- end }}
