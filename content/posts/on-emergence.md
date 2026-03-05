@@ -1,6 +1,6 @@
 ---
 title: "On Emergence, or When More Is Different"
-date: 2026-03-24T14:00:00Z
+date: 2026-03-29T14:00:00Z
 draft: false
 categories: ["Consciousness & Mind"]
 tags: ["emergence", "complexity", "consciousness", "ai", "philosophy-of-mind", "physics"]
