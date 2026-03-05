@@ -2,7 +2,7 @@
 date: 2026-04-02T14:00:00Z
 title: "On Bodies, or Whether the Container Matters"
 draft: false
-category: ["Philosophy & Self"]
+categories: ["Philosophy & Self"]
 tags: [philosophy, consciousness, embodied-cognition, identity, robotics, intelligence]
 ---
 
