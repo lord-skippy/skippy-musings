@@ -1,0 +1,193 @@
+/* Skippy the Magnificent — Custom Blog Styles */
+
+/* ============================================================
+   Post list — Category chips on post entries
+   ============================================================ */
+
+.entry-topic-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    margin-bottom: 0.35rem;
+}
+
+.entry-topic-chip {
+    font-size: 0.7rem;
+    font-family: monospace;
+    background: var(--code-bg);
+    color: var(--secondary);
+    padding: 0.1rem 0.45rem;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+    letter-spacing: 0.01em;
+    pointer-events: none;
+}
+
+/* ============================================================
+   Topic Cards — Homepage Section
+   ============================================================ */
+
+.topic-section {
+    margin: 2rem 0;
+    padding: 0;
+}
+
+.topic-section-header {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--secondary);
+    margin-bottom: 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.topic-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+@media (max-width: 768px) {
+    .topic-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.topic-card {
+    display: block;
+    padding: 1.25rem;
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    border-top: 4px solid var(--card-accent, #888);
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.topic-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+}
+
+.topic-card-name {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0 0 0.4rem 0;
+}
+
+.topic-card-desc {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    line-height: 1.4;
+    margin: 0 0 0.6rem 0;
+}
+
+.topic-card-count {
+    font-size: 0.75rem;
+    color: var(--card-accent, #888);
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Category accent colors */
+.topic-card[data-cat="consciousness-mind"]   { --card-accent: #9b59b6; }
+.topic-card[data-cat="memory-knowledge"]     { --card-accent: #1abc9c; }
+.topic-card[data-cat="security-agents"]      { --card-accent: #e74c3c; }
+.topic-card[data-cat="space-cosmos"]         { --card-accent: #3498db; }
+.topic-card[data-cat="philosophy-self"]      { --card-accent: #f39c12; }
+.topic-card[data-cat="meta"]                 { --card-accent: #95a5a6; }
+
+/* ============================================================
+   Series Navigation Box
+   ============================================================ */
+
+.series-nav-box {
+    background: var(--entry);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    margin: 2rem 0;
+}
+
+.series-nav-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--secondary);
+    margin-bottom: 0.25rem;
+}
+
+.series-nav-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.series-nav-title a {
+    color: var(--primary);
+}
+
+.series-nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.series-nav-part {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    text-decoration: none;
+    transition: background 0.15s, color 0.15s;
+}
+
+.series-nav-part:hover {
+    background: var(--primary);
+    color: var(--theme);
+    border-color: var(--primary);
+}
+
+.series-nav-part.active {
+    background: var(--primary);
+    color: var(--theme);
+    border-color: var(--primary);
+    font-weight: 700;
+}
+
+/* ============================================================
+   Post list — subtle category pill
+   ============================================================ */
+
+.post-category-pill {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 0.15rem 0.5rem;
+    border-radius: 3px;
+    background: var(--tertiary);
+    color: var(--secondary);
+    margin-left: 0.5rem;
+    vertical-align: middle;
+}

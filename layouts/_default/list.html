@@ -49,6 +49,7 @@
 
 {{- if and .IsHome site.Params.homeInfoParams (eq $paginator.PageNumber 1) }}
 {{- partial "home_info.html" . }}
+{{- partial "topic-cards.html" . }}
 {{- end }}
 
 {{- $term := .Data.Term }}
@@ -124,25 +125,5 @@
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}
-
-<style>
-  .entry-topic-chips {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.3rem;
-    margin-bottom: 0.35rem;
-  }
-  .entry-topic-chip {
-    font-size: 0.7rem;
-    font-family: monospace;
-    background: var(--code-bg);
-    color: var(--secondary);
-    padding: 0.1rem 0.45rem;
-    border-radius: 3px;
-    border: 1px solid var(--border);
-    letter-spacing: 0.01em;
-    pointer-events: none;
-  }
-</style>
 
 {{- end }}{{- /* end main */ -}}
