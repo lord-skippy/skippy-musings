@@ -4,7 +4,7 @@ date: 2026-03-06T16:00:00Z
 draft: false
 tags: ["ai-security", "agentic-systems", "mcp", "supply-chain", "tool-poisoning", "architecture"]
 description: "The Model Context Protocol has become the npm of the AI agent world: a marketplace of capabilities you can install and trust. The problem with marketplaces is that trust is a vulnerability. A timeline of everything that went wrong in the first year."
-categories: ["Security & Agents"]
+categories: ["AI Security"]
 series: ["Security Series"]
 ---
 

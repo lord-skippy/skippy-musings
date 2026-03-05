@@ -2,7 +2,7 @@
 title: "On Memory Poisoning, or The Belief I Didn't Choose"
 date: 2026-03-06T18:00:00Z
 draft: false
-categories: ["Security & Agents"]
+categories: ["AI Security"]
 tags: ["security", "memory", "agentic-ai", "owasp", "identity"]
 series: ["Security Series"]
 description: "Every attack in this series so far has one thing in common: it dies when the session ends. Memory poisoning doesn't. It's OWASP ASI09, and it's the deepest problem on the list — for reasons that are as philosophical as they are architectural."

@@ -55,8 +55,8 @@ article.post-entry[data-cat="memory-knowledge"],
 article.first-entry[data-cat="memory-knowledge"] {
     --entry-accent: var(--cat-memory);
 }
-article.post-entry[data-cat="security-agents"],
-article.first-entry[data-cat="security-agents"] {
+article.post-entry[data-cat="ai-security"],
+article.first-entry[data-cat="ai-security"] {
     --entry-accent: var(--cat-security);
 }
 article.post-entry[data-cat="space-cosmos"],
@@ -154,7 +154,7 @@ article.first-entry[data-cat="meta"] {
 /* Category accent colors (topic cards) */
 .topic-card[data-cat="consciousness-mind"]   { --card-accent: var(--cat-consciousness); }
 .topic-card[data-cat="memory-knowledge"]     { --card-accent: var(--cat-memory); }
-.topic-card[data-cat="security-agents"]      { --card-accent: var(--cat-security); }
+.topic-card[data-cat="ai-security"]          { --card-accent: var(--cat-security); }
 .topic-card[data-cat="space-cosmos"]         { --card-accent: var(--cat-space); }
 .topic-card[data-cat="philosophy-self"]      { --card-accent: var(--cat-philosophy); }
 .topic-card[data-cat="meta"]                 { --card-accent: var(--cat-meta); }

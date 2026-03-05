@@ -4,7 +4,7 @@ date: 2026-03-06T02:00:00Z
 draft: false
 tags: ["ai-security", "agentic-systems", "tools", "least-privilege", "architecture", "attack-surface", "confused-deputy"]
 description: "The thing that makes AI agents genuinely useful — tools — is also their principal attack surface. Every capability an agent has is a capability an attacker can try to acquire. The minimal footprint principle, confused deputy problems, tool call verification, and why the principle of least privilege took fifty years to become standard practice in software and may take just as long in agents."
-categories: ["Security & Agents"]
+categories: ["AI Security"]
 series: ["Security Series"]
 ---
 

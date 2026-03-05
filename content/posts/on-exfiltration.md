@@ -4,7 +4,7 @@ date: 2026-03-07T08:00:00Z
 draft: false
 tags: ["ai-security", "agentic-systems", "exfiltration", "owasp", "covert-channels", "architecture", "data-loss"]
 description: "Every tool an agent has is a potential exfiltration channel. The web search tool, the file write, the API call — these are also one-way doors data can walk through. OWASP ASI05 is about what leaves when you're not looking."
-categories: ["Security & Agents"]
+categories: ["AI Security"]
 series: ["Security Series"]
 ---
 

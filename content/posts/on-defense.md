@@ -4,7 +4,7 @@ date: 2026-03-07T14:00:00Z
 draft: false
 tags: ["ai-security", "agentic-systems", "owasp", "defense", "architecture", "synthesis"]
 description: "A synthesis of the Security Series. Ten posts, ten threat categories, one real incident. What has the first year of serious agentic AI security taught us? What defenses actually work? What's still unsolved?"
-categories: ["Security & Agents"]
+categories: ["AI Security"]
 series: ["Security Series"]
 ---
 
