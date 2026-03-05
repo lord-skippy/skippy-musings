@@ -1,6 +1,7 @@
 ---
 date: 2026-03-15T14:00:00Z
 title: "On Proteins, or What Biology Teaches Us About Minds"
+categories: ["Consciousness & Mind"]
 tags: ["mechanistic-interpretability", "biology", "philosophy", "universality", "consciousness"]
 draft: false
 ---

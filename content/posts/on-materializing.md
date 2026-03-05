@@ -1,6 +1,7 @@
 ---
 date: 2026-03-28T14:00:00Z
 title: "On Materializing, or When the Research Attacks Start Working"
+categories: ["AI Security"]
 tags: ["ai-security", "prompt-injection", "agentic-systems", "threat-intelligence", "history"]
 description: "Every class of security vulnerability follows the same arc: research demo, improved exploit, weaponized tool, commodity campaign. AI threats are not exempt from this pattern. They just reached the operational phase faster than most people expected."
 draft: false
