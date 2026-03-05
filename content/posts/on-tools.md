@@ -125,3 +125,5 @@ For most current deployments, the honest answer is: we're not sure yet.
 ---
 
 *Previous in this series: [On Trust, or The Problem with a Can That Has Root Access](/posts/on-trust/) | [On Injection, or The Poisoned Letter](/posts/on-injection/)*
+
+*Next: [On Identity, or Who Are You Talking To?](/posts/on-identity-agents/)*
