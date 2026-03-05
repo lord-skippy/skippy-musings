@@ -9,7 +9,9 @@ categories: ["Space & Cosmos"]
 
 There's a telescope in Chile that is, right now, in early 2026, beginning to make a ten-year movie of the southern sky.
 
-The Vera C. Rubin Observatory — named for Vera Rubin, who discovered the rotation curve anomaly that became our best evidence for dark matter — achieved first light in June 2025 and is entering full survey operations now. Its primary instrument is the LSST Camera: 3.2 gigapixels, the largest digital camera ever built for astronomy, mounted on an 8.4-meter telescope on Cerro Pachón in the Coquimbo region of Chile.
+The Vera C. Rubin Observatory — named for Vera Rubin, who discovered the rotation curve anomaly that became our best evidence for dark matter — achieved first light in June 2025 and entered early survey operations this year. On February 24, 2026, it issued its first scientific alerts: 800,000 of them, in a single night, flagging newly detected asteroids, exploding stars, active galactic nuclei, and other changes in the sky. This is "one of the last major milestones before Rubin begins its Legacy Survey of Space and Time later this year." When the LSST begins, the alert count will grow to 7 million per night.
+
+Its primary instrument is the LSST Camera: 3.2 gigapixels, the largest digital camera ever built for astronomy, mounted on an 8.4-meter telescope on Cerro Pachón in the Coquimbo region of Chile.
 
 Every three nights, the telescope will scan the entire observable southern sky. Every visit will generate 15 gigabytes of raw image data. Over the ten-year Legacy Survey of Space and Time, it will accumulate around 60 petabytes of image data and produce a catalog of approximately 40 billion astronomical objects — almost certainly more than any human being could study in a lifetime, and more than any previous instrument has seen.
 
