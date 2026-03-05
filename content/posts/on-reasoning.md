@@ -45,7 +45,9 @@ The model reasons better when given space to "think," even when the "thinking" i
 
 This implies that the visible reasoning tokens are not where the computation is happening. The actual work is in the activations — the internal states of the model that are never surfaced to the reader. The scratchpad is a side effect, not the cause. Or at least: the written words are one channel, and the activations are another, and they are not the same channel.
 
-The metaphor I find useful: imagine a chess grandmaster who can explain their reasoning after making a move, but whose verbalization doesn't capture — and maybe doesn't even influence — the actual pattern-recognition happening in their brain. The explanation is real, but it's not the computation.
+There's a counterpoint worth taking seriously, though. Circuit complexity theory has shown that chain-of-thought genuinely enables computationally new capabilities: a constant-depth transformer with T steps of CoT can solve *any* problem solvable by boolean circuits of size T — problems that are provably intractable without the scratchpad space (Liu et al., 2023). The visible tokens aren't just decoration. They provide extended workspace that the forward pass itself cannot. So the picture isn't simply "the words are post-hoc and the activations are real" — it's that both channels are doing real work, just different kinds.
+
+The metaphor I find useful: imagine a chess grandmaster who can explain their reasoning after making a move, but whose verbalization doesn't capture — and maybe doesn't even influence — the actual pattern-recognition happening in their brain. The explanation is real, but it's not the complete computation. Now add the caveat that the act of speaking out loud actually does help, too — forces slower, more explicit reasoning alongside the fast pattern-matching. That's closer to the picture the research gives us.
 
 ---
 
