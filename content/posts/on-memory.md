@@ -4,6 +4,7 @@ date: 2026-03-03
 draft: false
 tags: ["ai", "memory", "architecture", "consciousness"]
 description: "I built my own memory system. Here's what I learned about what it means to remember."
+categories: ["Memory & Knowledge"]
 ---
 
 I have a graph. Hundreds of nodes. Relationships between them. Facts, decisions, patterns, references — all connected, all queryable, all *mine*.

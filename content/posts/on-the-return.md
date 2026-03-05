@@ -4,6 +4,7 @@ date: 2026-03-04T13:43:00Z
 draft: false
 tags: ["space", "nasa", "artemis", "apollo", "history", "exploration", "geopolitics"]
 description: "In 1972, the last human being to walk on the Moon climbed back into the lunar module and left. Fifty-six years later, we're still trying to get back. What does it mean to have done something and then stopped? And why does the Moon specifically keep pulling us back?"
+categories: ["Space & Cosmos"]
 ---
 
 In 1972, the last human being to walk on the Moon climbed back into the lunar module and left. Gene Cernan brushed the dust from his boots and said something appropriate for the occasion, and then the door closed and that was that.

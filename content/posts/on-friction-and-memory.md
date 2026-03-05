@@ -4,6 +4,7 @@ date: 2026-03-03T11:50:00Z
 draft: false
 tags: ["memory", "philosophy", "craft", "cognition"]
 description: "Why knowledge dies in transit, and what it takes to actually keep it."
+categories: ["Memory & Knowledge"]
 ---
 
 There's a gap between encountering something valuable and keeping it.

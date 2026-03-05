@@ -1,0 +1,76 @@
+{{- define "main" }}
+<style>
+  .term-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .term-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.2rem;
+  }
+  .term-header h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+  .term-header p { color: var(--secondary); margin: 0; font-size: 0.92rem; }
+  .term-post-list { list-style: none; padding: 0; }
+  .term-post-item {
+    padding: 0.9rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 1rem;
+    align-items: baseline;
+  }
+  .term-post-item:last-child { border-bottom: none; }
+  .term-post-date {
+    font-family: monospace;
+    font-size: 0.8rem;
+    color: var(--secondary);
+    min-width: 5.5rem;
+    flex-shrink: 0;
+  }
+  .term-post-title a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .term-post-title a:hover { text-decoration: underline; }
+  .term-post-desc {
+    font-size: 0.84rem;
+    color: var(--secondary);
+    margin-top: 0.2rem;
+    line-height: 1.5;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--primary); }
+</style>
+
+<div class="term-page">
+  <header class="term-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }} in this topic</p>
+  </header>
+
+  <ul class="term-post-list">
+    {{- range .Pages.ByDate.Reverse }}
+    <li class="term-post-item">
+      <span class="term-post-date">{{ .Date.Format "Jan 2, 2006" }}</span>
+      <div>
+        <div class="term-post-title"><a href="{{ .Permalink }}">{{ .Title }}</a></div>
+        {{- with .Params.description }}
+        <div class="term-post-desc">{{ . | truncate 120 "…" }}</div>
+        {{- end }}
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+
+  <a class="back-link" href="{{ "/categories/" | absURL }}">← All Topics</a>
+</div>
+{{- end }}

@@ -1,0 +1,141 @@
+{{- define "main" }}
+
+<article class="post-single">
+  <header class="post-header">
+    {{ partial "breadcrumbs.html" . }}
+    <h1 class="post-title entry-hint-parent">
+      {{ .Title }}
+      {{- if .Draft }}
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+      {{- end }}
+    </h1>
+    {{- if .Description }}
+    <div class="post-description">
+      {{ .Description }}
+    </div>
+    {{- end }}
+    {{- if not (.Param "hideMeta") }}
+    <div class="post-meta">
+      {{- partial "post_meta.html" . -}}
+      {{- partial "translation_list.html" . -}}
+      {{- partial "edit_post.html" . -}}
+      {{- partial "post_canonical.html" . -}}
+    </div>
+    {{- end }}
+    {{- with .Params.categories }}
+    <div class="post-topic-tags">
+      {{- range . }}
+      <a href="{{ "/categories/" | absURL }}{{ . | urlize }}/" class="post-topic-tag">{{ . }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </header>
+
+  {{/* Series navigation — shown before content */}}
+  {{- partial "series-nav.html" . }}
+
+  {{- $isHidden := (.Param "cover.hiddenInSingle") | default (.Param "cover.hidden") | default false }}
+  {{- partial "cover.html" (dict "cxt" . "IsSingle" true "isHidden" $isHidden) }}
+  {{- if (.Param "ShowToc") }}
+  {{- partial "toc.html" . }}
+  {{- end }}
+
+  {{- if .Content }}
+  <div class="post-content">
+    {{- if not (.Param "disableAnchoredHeadings") }}
+    {{- partial "anchored_headings.html" .Content -}}
+    {{- else }}{{ .Content }}{{ end }}
+  </div>
+  {{- end }}
+
+  <footer class="post-footer">
+    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
+    <ul class="post-tags">
+      {{- range ($.GetTerms $tags) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+    {{- if (.Param "ShowPostNavLinks") }}
+    {{- partial "post_nav_links.html" . }}
+    {{- end }}
+    {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
+    {{- partial "share_icons.html" . -}}
+    {{- end }}
+    {{- with .Params.categories }}
+    <div class="post-footer-topics">
+      <span class="post-footer-label">Filed under:</span>
+      {{- range . }}
+      <a href="{{ "/categories/" | absURL }}{{ . | urlize }}/" class="post-footer-topic">{{ . }}</a>
+      {{- end }}
+    </div>
+    {{- end }}
+    <div class="post-footer-json">
+      <a href="{{ .Permalink }}index.json" class="post-footer-json-link">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+        </svg>
+        machine-readable (JSON)
+      </a>
+    </div>
+  </footer>
+
+  {{- if (.Param "comments") }}
+  {{- partial "comments.html" . }}
+  {{- end }}
+</article>
+
+<style>
+  .post-topic-tags {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .post-topic-tag {
+    font-size: 0.75rem;
+    background: var(--code-bg);
+    color: var(--secondary);
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    border: 1px solid var(--border);
+    font-family: monospace;
+    transition: all 0.15s;
+  }
+  .post-topic-tag:hover { color: var(--primary); border-color: var(--primary); }
+  .post-footer-topics {
+    margin-top: 0.8rem;
+    font-size: 0.84rem;
+    color: var(--secondary);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    align-items: center;
+  }
+  .post-footer-label { color: var(--secondary); }
+  .post-footer-topic {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.84rem;
+  }
+  .post-footer-topic:hover { text-decoration: underline; }
+  .post-footer-json {
+    margin-top: 0.6rem;
+    font-size: 0.8rem;
+  }
+  .post-footer-json-link {
+    color: var(--secondary);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+  }
+  .post-footer-json-link:hover { color: var(--primary); }
+</style>
+
+{{- end }}{{/* end main */}}

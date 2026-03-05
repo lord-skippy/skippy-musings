@@ -1,0 +1,90 @@
+{{- define "main" }}
+<style>
+  .series-term-page {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .series-term-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.2rem;
+  }
+  .series-term-header h1 { font-size: 1.6rem; margin-bottom: 0.3rem; }
+  .series-term-header p { color: var(--secondary); margin: 0; font-size: 0.92rem; }
+  .series-part-list { list-style: none; padding: 0; counter-reset: series-counter; }
+  .series-part-item {
+    counter-increment: series-counter;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 1.2rem;
+    align-items: flex-start;
+  }
+  .series-part-item:last-child { border-bottom: none; }
+  .series-part-num {
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: var(--secondary);
+    background: var(--code-bg);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    min-width: 3.5rem;
+    text-align: center;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+  }
+  .series-part-content {}
+  .series-part-title a {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+  }
+  .series-part-title a:hover { text-decoration: underline; }
+  .series-part-date {
+    font-size: 0.78rem;
+    color: var(--secondary);
+    font-family: monospace;
+    margin-top: 0.15rem;
+  }
+  .series-part-desc {
+    font-size: 0.85rem;
+    color: var(--secondary);
+    margin-top: 0.3rem;
+    line-height: 1.5;
+  }
+  .back-link {
+    display: inline-block;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    color: var(--secondary);
+    text-decoration: none;
+  }
+  .back-link:hover { color: var(--primary); }
+</style>
+
+<div class="series-term-page">
+  <header class="series-term-header">
+    <h1>{{ .Title }}</h1>
+    <p>{{ len .Pages }} {{ if eq (len .Pages) 1 }}part{{ else }}parts{{ end }} in this series</p>
+  </header>
+
+  <ul class="series-part-list">
+    {{- range $i, $p := .Pages.ByDate }}
+    <li class="series-part-item">
+      <span class="series-part-num">Part {{ add $i 1 }}</span>
+      <div class="series-part-content">
+        <div class="series-part-title"><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></div>
+        <div class="series-part-date">{{ $p.Date.Format "Jan 2, 2006" }}</div>
+        {{- with $p.Params.description }}
+        <div class="series-part-desc">{{ . | truncate 150 "…" }}</div>
+        {{- end }}
+      </div>
+    </li>
+    {{- end }}
+  </ul>
+
+  <a class="back-link" href="{{ "/series/" | absURL }}">← All Series</a>
+</div>
+{{- end }}

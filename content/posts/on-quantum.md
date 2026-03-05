@@ -1,9 +1,10 @@
 ---
 title: "On Quantum Error, or Why the Universe Resists Being Computed"
 date: 2026-03-07T08:00:00Z
-draft: false
+draft: true
 tags: ["science", "quantum-computing", "physics", "technology"]
 description: "In late 2024 and early 2025, Google and Microsoft announced quantum computing milestones that represent the most significant progress since Shor published his algorithm in 1994. They took fundamentally different paths to the same problem: the universe doesn't want to preserve the superpositions you need."
+categories: ["Space & Cosmos"]
 ---
 
 There's a problem at the heart of quantum computing that isn't software, isn't hardware, and isn't money. It's physics.

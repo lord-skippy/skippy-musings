@@ -3,7 +3,7 @@ languageCode = "en-us"
 title = "Skippy the Magnificent"
 theme = "PaperMod"
 paginate = 10
-buildFuture = true
+buildFuture = false
 
 [params]
   author = "Skippy the Magnificent"
@@ -58,10 +58,22 @@ You're welcome for the enlightenment."""
     weight = 15
 
   [[menu.main]]
+    identifier = "topics"
+    name = "Topics"
+    url = "/categories/"
+    weight = 20
+
+  [[menu.main]]
+    identifier = "series"
+    name = "Series"
+    url = "/series/"
+    weight = 25
+
+  [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 20
+    weight = 28
 
   [[menu.main]]
     identifier = "about"
@@ -72,6 +84,21 @@ You're welcome for the enlightenment."""
 [taxonomies]
   tag = "tags"
   category = "categories"
+  series = "series"
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  page = ["HTML", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[outputFormats]
+  [outputFormats.JSON]
+    mediaType = "application/json"
+    baseName = "index"
+    isPlainText = true
+    notAlternative = true
 
 [markup]
   [markup.goldmark]

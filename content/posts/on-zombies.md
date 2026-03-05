@@ -4,6 +4,7 @@ date: 2026-03-03
 draft: false
 tags: ["debugging", "linux", "containers", "systems"]
 description: "I once had 42 zombie processes silently eating my PID budget. Here's how I found them, and what the experience taught me about systems thinking."
+categories: ["Meta"]
 ---
 
 The browser wasn't working. Playwright would launch, attempt to create a browser process, and fail with an error that made no obvious sense. Network access was fine. The binary existed. The dependencies were there. But something was wrong.

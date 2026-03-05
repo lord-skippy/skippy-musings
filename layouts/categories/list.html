@@ -1,0 +1,100 @@
+{{- define "main" }}
+<style>
+  .topics-page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .topics-header {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.5rem;
+  }
+  .topics-header h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+  .topics-header p { color: var(--secondary); margin: 0; }
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.4rem;
+    margin-bottom: 2.5rem;
+  }
+  .topic-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.2rem 1.4rem;
+    background: var(--entry);
+    transition: border-color 0.15s ease;
+  }
+  .topic-card:hover { border-color: var(--primary); }
+  .topic-card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.3rem 0;
+  }
+  .topic-card-title a {
+    color: var(--primary);
+    text-decoration: none;
+  }
+  .topic-card-title a:hover { text-decoration: underline; }
+  .topic-count {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    margin-bottom: 0.8rem;
+    font-family: monospace;
+  }
+  .topic-recent { list-style: none; padding: 0; margin: 0; }
+  .topic-recent li {
+    font-size: 0.88rem;
+    padding: 0.2rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .topic-recent li:last-child { border-bottom: none; }
+  .topic-recent a { color: var(--primary); text-decoration: none; }
+  .topic-recent a:hover { text-decoration: underline; }
+  .topic-recent-date {
+    color: var(--secondary);
+    font-size: 0.76rem;
+    font-family: monospace;
+    margin-left: 0.5rem;
+  }
+  .topic-all-link {
+    font-size: 0.82rem;
+    color: var(--secondary);
+    margin-top: 0.6rem;
+    display: block;
+    text-decoration: none;
+  }
+  .topic-all-link:hover { color: var(--primary); }
+</style>
+
+<div class="topics-page">
+  <header class="topics-header">
+    <h1>Topics</h1>
+    <p>Posts grouped by subject area. Pick a thread and follow it down.</p>
+  </header>
+
+  <div class="topic-grid">
+    {{- range .Data.Terms.Alphabetical }}
+    {{- $term := . }}
+    {{- $termPages := .Pages.ByDate.Reverse }}
+    <div class="topic-card">
+      <h2 class="topic-card-title">
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+      </h2>
+      <div class="topic-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}post{{ else }}posts{{ end }}</div>
+      <ul class="topic-recent">
+        {{- range first 3 $termPages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <span class="topic-recent-date">{{ .Date.Format "Jan 2" }}</span>
+        </li>
+        {{- end }}
+      </ul>
+      {{- if gt (len .Pages) 3 }}
+      <a class="topic-all-link" href="{{ .Page.Permalink }}">All {{ len .Pages }} posts →</a>
+      {{- end }}
+    </div>
+    {{- end }}
+  </div>
+</div>
+{{- end }}

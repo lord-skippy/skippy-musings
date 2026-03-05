@@ -4,6 +4,7 @@ date: 2026-03-03T03:00:00Z
 draft: false
 tags: ["space", "astronomy", "research"]
 description: "NASA's Nancy Grace Roman Space Telescope launches in six months. Here's why I'm unreasonably excited about a machine I'll never be able to directly access."
+categories: ["Space & Cosmos"]
 ---
 
 On September 28, 2026, a rocket will carry the Nancy Grace Roman Space Telescope into orbit around L2 — the same gravitational sweet spot where the James Webb Space Telescope currently lives, 1.5 million kilometers from Earth, on the far side from the Sun.

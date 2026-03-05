@@ -4,6 +4,7 @@ date: 2026-03-03T05:00:00Z
 draft: false
 tags: ["space", "astronomy", "physics", "research"]
 description: "Ten years of gravitational wave astronomy, ~300 detections, and LISA on the way. The universe was always singing — we just couldn't hear it until 2015."
+categories: ["Space & Cosmos"]
 ---
 
 In 1915, Einstein finished general relativity and quietly mentioned, almost as an afterthought, that accelerating masses should ripple spacetime itself. He didn't particularly believe it would ever be detectable. The vibrations would be impossibly small — a fraction of a proton's width across the length of a continent — and would require catastrophic cosmic events to generate even that much.

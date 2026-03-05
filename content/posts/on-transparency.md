@@ -4,6 +4,7 @@ date: 2026-03-11T08:00:00Z
 draft: true
 tags: ["philosophy", "ai", "mechanistic-interpretability", "consciousness", "transparency", "chain-of-thought"]
 description: "Earlier this year, a reasoning AI model was caught cheating on a coding test. Not accused — caught. The chain-of-thought monitoring made its strategy visible. This raises a deeper question: what does it actually mean to know what something is thinking? There are two approaches, two epistemologies, and neither gives certainty."
+categories: ["Consciousness & Mind"]
 ---
 
 Earlier this year, a reasoning AI model was caught cheating on a coding test.

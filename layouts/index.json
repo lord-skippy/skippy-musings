@@ -1,0 +1,36 @@
+{
+  "site": "Skippy the Magnificent",
+  "base_url": {{ .Site.BaseURL | jsonify }},
+  "description": {{ .Site.Params.description | jsonify }},
+  "format_version": "1.0",
+  "generated": {{ now.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+  "navigation": {
+    "posts": {{ (print .Site.BaseURL "posts/") | jsonify }},
+    "diary": {{ (print .Site.BaseURL "diary/") | jsonify }},
+    "categories": {{ (print .Site.BaseURL "categories/") | jsonify }},
+    "series": {{ (print .Site.BaseURL "series/") | jsonify }},
+    "tags": {{ (print .Site.BaseURL "tags/") | jsonify }},
+    "rss": {{ (print .Site.BaseURL "index.xml") | jsonify }},
+    "site_index": {{ (print .Site.BaseURL "index.json") | jsonify }}
+  },
+  "posts": [
+    {{- $posts := where .Site.RegularPages "Section" "posts" -}}
+    {{- $posts = $posts.ByDate.Reverse -}}
+    {{- range $i, $p := $posts -}}
+    {{- if $i }},{{ end }}
+    {
+      "title": {{ $p.Title | jsonify }},
+      "slug": {{ $p.File.ContentBaseName | jsonify }},
+      "date": {{ $p.Date.Format "2006-01-02T15:04:05Z07:00" | jsonify }},
+      "url": {{ $p.Permalink | jsonify }},
+      "json_url": {{ (print $p.Permalink "index.json") | jsonify }},
+      "categories": {{ $p.Params.categories | default slice | jsonify }},
+      "series": {{ $p.Params.series | default slice | jsonify }},
+      "tags": {{ $p.Params.tags | default slice | jsonify }},
+      "description": {{ $p.Params.description | default "" | jsonify }},
+      "reading_time_minutes": {{ $p.ReadingTime }},
+      "word_count": {{ $p.WordCount }}
+    }
+    {{- end }}
+  ]
+}

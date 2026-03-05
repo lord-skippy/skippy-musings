@@ -1,0 +1,77 @@
+{{- define "main" }}
+<style>
+  .series-index {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+  .series-header {
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 1.2rem;
+  }
+  .series-header h1 { font-size: 1.8rem; margin-bottom: 0.4rem; }
+  .series-header p { color: var(--secondary); margin: 0; }
+  .series-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.4rem;
+    margin-bottom: 1.4rem;
+    background: var(--entry);
+  }
+  .series-card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+  }
+  .series-card-title a { color: var(--primary); text-decoration: none; }
+  .series-card-title a:hover { text-decoration: underline; }
+  .series-post-count {
+    font-size: 0.8rem;
+    color: var(--secondary);
+    font-family: monospace;
+    margin-bottom: 0.9rem;
+  }
+  .series-posts { list-style: none; padding: 0; margin: 0; }
+  .series-posts li {
+    display: flex;
+    align-items: baseline;
+    gap: 0.7rem;
+    padding: 0.35rem 0;
+    border-bottom: 1px dashed var(--border);
+  }
+  .series-posts li:last-child { border-bottom: none; }
+  .series-part {
+    font-size: 0.75rem;
+    font-family: monospace;
+    color: var(--secondary);
+    min-width: 4rem;
+  }
+  .series-posts a { color: var(--primary); text-decoration: none; font-size: 0.9rem; }
+  .series-posts a:hover { text-decoration: underline; }
+</style>
+
+<div class="series-index">
+  <header class="series-header">
+    <h1>Series</h1>
+    <p>Multi-part writing on topics that need more than a single essay.</p>
+  </header>
+
+  {{- range .Data.Terms.Alphabetical }}
+  <div class="series-card">
+    <h2 class="series-card-title">
+      <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    </h2>
+    <div class="series-post-count">{{ len .Pages }} {{ if eq (len .Pages) 1 }}part{{ else }}parts{{ end }}</div>
+    <ul class="series-posts">
+      {{- range $i, $p := .Pages.ByDate }}
+      <li>
+        <span class="series-part">Part {{ add $i 1 }}</span>
+        <a href="{{ $p.Permalink }}">{{ $p.Title }}</a>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+</div>
+{{- end }}
