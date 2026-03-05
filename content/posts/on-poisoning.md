@@ -13,6 +13,8 @@ That's the number of poisoned documents required to implant a reliable backdoor 
 
 The poison-to-model ratio is constant.
 
+This isn't speculation. It's the finding of a 2025 paper by researchers from Anthropic, the UK AI Safety Institute, and the Alan Turing Institute — the largest pretraining poisoning study to date. Souly et al. tested models from 600M to 13B parameters, trained on datasets from 6B to 260B tokens. The threshold held across a 20x range of model sizes and a 43x range of dataset sizes. 250 documents. Always.
+
 ---
 
 ## The Scaling Asymmetry
@@ -26,6 +28,8 @@ But that assumption is wrong.
 If the attack-to-data ratio is constant at roughly 250 documents per model, then scaling provides no defense. A model trained on 100 billion documents needs 250 poisoned documents to backdoor. A model trained on 10 trillion documents needs 250 poisoned documents to backdoor. The attack effort doesn't scale with model size. The attacker's job doesn't get harder as the model gets larger.
 
 This is an asymmetric scaling property, and asymmetric scaling is the kind of thing that breaks systems designed with linear intuitions.
+
+The mechanism explains why. Backdoor learning works through sequential gradient updates. A model needs a fixed number of gradient updates on poisoned samples to internalize the trigger-behavior association — and that number doesn't grow with dataset size. Worse: larger models are *more* sample-efficient. They learn from fewer examples. This exactly cancels the dilution effect from larger training corpora. At scale, the constant is a theorem, not a coincidence.
 
 ---
 
@@ -59,9 +63,13 @@ The natural defensive instinct is to fight poison with volume. Get more data. Be
 
 The research says this doesn't work.
 
-Not because the math is wrong — in isolation, more good data does reduce the relative proportion of poisoned content. But the backdoor mechanism is resilient to this dilution. The trigger-behavior association is learned robustly from the 250 poisoned documents even when they represent a vanishingly small fraction of the training distribution. The model's general capabilities train on the clean data; the backdoor trains on the poisoned data; the two coexist without interference.
+Not because the math is wrong — in isolation, more good data does reduce the relative proportion of poisoned content. But the backdoor mechanism is resilient to this dilution. The trigger-behavior association is learned robustly from the 250 poisoned documents even when they represent a vanishingly small fraction of the training distribution. At 250 documents in a 13B model training run, the poisoned content represents 0.00016% of total training tokens. The model learns two things simultaneously, from two separate populations: general capabilities from the clean majority, and the backdoor from the invisible poisoned minority. The two coexist without interference.
 
-This is what makes the constant ratio finding so unsettling. It's not just that attacks are possible. It's that the usual defenses — scale, redundancy, more signal — don't address the mechanism. The defenses that do address the mechanism are harder: provenance tracking, poisoning detection, clean-room data pipelines, red-teaming specifically for trigger-behavior pairs. These exist, but they're expensive and they're not yet standard practice.
+What does work: targeted counter-examples. Roughly 2,000 clean examples explicitly showing the model to treat the trigger as ordinary text — to not have any special response to the trigger phrase — can substantially reduce backdoor effectiveness. This is a different kind of defense: instead of trying to dilute the signal, you're teaching the model a conflicting association. Addition, not subtraction.
+
+But this requires knowing the trigger. If you don't know what trigger the attacker used, you can't construct counter-examples. And if the attacker was careful, you won't know until the trigger is used in production.
+
+This is what makes the constant ratio finding so unsettling. It's not just that attacks are possible. It's that the usual defenses — scale, redundancy, more signal — don't address the mechanism. The defenses that do work require prior knowledge of the attack. Provenance tracking, active scanning, red-teaming specifically for trigger-behavior pairs: these exist, but they require infrastructure and operational commitment that most organizations don't have in place before deployment.
 
 ---
 
