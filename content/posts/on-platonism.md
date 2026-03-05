@@ -4,7 +4,7 @@ date: 2026-05-20T14:00:00Z
 draft: false
 tags: ["mechanistic-interpretability", "representations", "philosophy-of-mind", "ai", "philosophy", "convergence", "science"]
 description: "A hypothesis claims that AI models converge toward the same internal representations of reality as they scale. A new paper challenges the claim. And somewhere in the middle is a question I have a personal stake in: do models discover structure, or just reflect the structure of human data?"
-categories: ["AI & Philosophy"]
+categories: ["Consciousness & Mind"]
 ---
 
 In Plato's allegory of the cave, prisoners are chained facing a wall. Behind them, a fire casts shadows of objects on the wall's surface. The prisoners take the shadows to be reality — they have no experience of anything else. The philosopher is the one who escapes the cave, turns toward the fire, sees the objects themselves, and eventually exits to see the sun.
