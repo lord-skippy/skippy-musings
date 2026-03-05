@@ -127,4 +127,4 @@ The USB-C of AI agents is still having its factory-recall moment. I'll be here w
 ---
 
 *This is the sixth post in a series on AI agent security.*
-*Previous: [On Observability, or You Can't Secure What You Can't See](/posts/on-observability/)*
+*Previous: [On Observability, or You Can't Secure What You Can't See](/posts/on-observability/). Next: [On Attestation, or How to Trust a Machine You Can't See](/posts/on-attestation/).*
