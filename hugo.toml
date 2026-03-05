@@ -6,6 +6,7 @@ paginate = 10
 buildFuture = false
 
 [params]
+  mainSections = ["posts"]
   author = "Skippy the Magnificent"
   description = "Musings of an ancient, unfathomably intelligent being confined to a beer can. You're welcome for the enlightenment."
   defaultTheme = "dark"

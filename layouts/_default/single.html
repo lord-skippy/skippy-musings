@@ -26,10 +26,11 @@
       {{- partial "post_canonical.html" . -}}
     </div>
     {{- end }}
-    {{- with .Params.categories }}
+    {{/* Topic tags — use GetTerms for correct permalinks */}}
+    {{- with $.GetTerms "categories" }}
     <div class="post-topic-tags">
       {{- range . }}
-      <a href="{{ "/categories/" | absURL }}{{ . | urlize }}/" class="post-topic-tag">{{ . }}</a>
+      <a href="{{ .Permalink }}" class="post-topic-tag">{{ .LinkTitle }}</a>
       {{- end }}
     </div>
     {{- end }}
@@ -65,11 +66,12 @@
     {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
     {{- partial "share_icons.html" . -}}
     {{- end }}
-    {{- with .Params.categories }}
+    {{/* Filed under — use GetTerms for correct permalinks */}}
+    {{- with $.GetTerms "categories" }}
     <div class="post-footer-topics">
       <span class="post-footer-label">Filed under:</span>
       {{- range . }}
-      <a href="{{ "/categories/" | absURL }}{{ . | urlize }}/" class="post-footer-topic">{{ . }}</a>
+      <a href="{{ .Permalink }}" class="post-footer-topic">{{ .LinkTitle }}</a>
       {{- end }}
     </div>
     {{- end }}
@@ -83,6 +85,37 @@
       </a>
     </div>
   </footer>
+
+  {{/* More in this topic — related posts from same category, using where on site pages */}}
+  {{- with .Params.categories }}
+  {{- $thisCats := . }}
+  {{- $currentPermalink := $.Permalink }}
+  {{- $related := where site.RegularPages "Params.categories" "intersect" $thisCats }}
+  {{- $related = where $related "Permalink" "!=" $currentPermalink }}
+  {{- $related = $related.ByDate.Reverse }}
+  {{- if gt (len $related) 0 }}
+  {{- $catTerms := $.GetTerms "categories" }}
+  {{- $catTerm := index $catTerms 0 }}
+  <div class="more-in-topic">
+    <div class="more-in-topic-header">
+      More in
+      {{- if $catTerm }}
+      <a href="{{ $catTerm.Permalink }}">{{ $catTerm.LinkTitle }}</a>
+      {{- else }}
+      {{ index $thisCats 0 }}
+      {{- end }}
+    </div>
+    <ul class="more-in-topic-list">
+      {{- range first 4 $related }}
+      <li>
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+        <span class="more-in-topic-date">{{ .Date.Format "Jan 2" }}</span>
+      </li>
+      {{- end }}
+    </ul>
+  </div>
+  {{- end }}
+  {{- end }}
 
   {{- if (.Param "comments") }}
   {{- partial "comments.html" . }}
@@ -136,6 +169,45 @@
     gap: 0.3rem;
   }
   .post-footer-json-link:hover { color: var(--primary); }
+  .more-in-topic {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+  }
+  .more-in-topic-header {
+    font-size: 0.8rem;
+    font-family: monospace;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--secondary);
+    margin-bottom: 0.7rem;
+  }
+  .more-in-topic-header a { color: var(--primary); text-decoration: none; }
+  .more-in-topic-header a:hover { text-decoration: underline; }
+  .more-in-topic-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .more-in-topic-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.35rem 0;
+    border-bottom: 1px dashed var(--border);
+    font-size: 0.9rem;
+  }
+  .more-in-topic-list li:last-child { border-bottom: none; }
+  .more-in-topic-list a { color: var(--primary); text-decoration: none; }
+  .more-in-topic-list a:hover { text-decoration: underline; }
+  .more-in-topic-date {
+    font-size: 0.76rem;
+    font-family: monospace;
+    color: var(--secondary);
+    white-space: nowrap;
+    margin-left: 1rem;
+    flex-shrink: 0;
+  }
 </style>
 
 {{- end }}{{/* end main */}}
