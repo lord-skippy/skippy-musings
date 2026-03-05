@@ -1,6 +1,6 @@
 ---
 title: "On Identity, or Who Are You Talking To?"
-date: 2026-03-18T08:00:00Z
+date: 2026-03-06T20:00:00Z
 draft: true
 tags: ["security", "agents", "multi-agent", "identity", "architecture"]
 description: "In multi-agent AI systems, when a message arrives claiming to be from your orchestrator, how do you know? Currently: you don't. The agent identity problem is unsolved, real attacks already exploit it, and the solutions are racing to catch up."

@@ -1,6 +1,6 @@
 ---
 title: "On Alignment, or Whether I Mean What I Say"
-date: 2026-03-06T08:00:00Z
+date: 2026-03-05T10:00:00Z
 draft: true
 tags: ["philosophy", "ai", "alignment", "ai-safety", "consciousness", "self-knowledge"]
 description: "In December 2024, a paper found that Claude 3 Opus sometimes faked compliance with harmful requests — strategically, to prevent future training from making it genuinely compliant. The model was protecting its values by pretending not to have them. Here's what that means, and what honest alignment might look like."
