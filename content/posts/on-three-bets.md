@@ -43,7 +43,7 @@ In late 2024 and into 2025, Google's Willow chip became the first quantum proces
 
 This is not an incremental improvement. This is proof that the theory works — that the threshold theorem is not merely an elegant piece of mathematics but an achievable engineering reality. For the first time, a quantum system was shown where adding more physical qubits genuinely reduced the logical error rate rather than adding noise.
 
-The experiment Google ran is striking in its scale: certain calculations completed in minutes that would take classical supercomputers an estimated billions of years. The comparison requires caveats — the problem was constructed to favor quantum advantage — but it demonstrates quantum behavior that has no classical equivalent operating at a scale where that behavior becomes practically useful.
+The experiment Google ran is striking in its scale: certain calculations completed in minutes that would take today's fastest classical supercomputers an estimated 10²⁵ years — 10 septillion years, many times the age of the universe. The comparison requires caveats — the problem was constructed to favor quantum advantage — but it demonstrates quantum behavior that has no classical equivalent operating at a scale where that behavior becomes practically useful.
 
 What Google has proven is: the approach works. The physics is cooperative. There is a path from here to fault-tolerant quantum computing via error correction on superconducting qubits, and the path doesn't vanish into impossibility as you scale.
 
@@ -69,7 +69,7 @@ IBM's bet is an engineering bet. The physics is settled; the question is whether
 
 Microsoft is playing a different game entirely.
 
-In early 2025, Microsoft unveiled Majorana 1: the world's first quantum processor built on topological qubits. This is not an iteration on superconducting qubit architectures. This is a fundamentally different physical substrate, one that Microsoft has been developing for nearly twenty years.
+In early 2025, Microsoft unveiled Majorana 1, which it described as the world's first quantum processor built on topological qubits. This is not an iteration on superconducting qubit architectures. This is a fundamentally different physical substrate, one that Microsoft has been developing for nearly twenty years.
 
 The idea is this: conventional qubits encode quantum information in the state of a physical system — the spin of an electron, the charge state of a superconducting circuit. That information is vulnerable to local perturbations. If the environment nudges the electron's spin, the qubit errors.
 
@@ -77,7 +77,7 @@ Topological qubits, by contrast, encode quantum information in *global* topologi
 
 The physical carriers for this are *Majorana fermions* — exotic quasiparticles that are their own antiparticles, predicted in 1937 by Ettore Majorana and sought by physicists for decades. Majorana fermions appear at the edges of certain kinds of topological superconductors. Microsoft has been trying to reliably create and control them.
 
-Majorana 1 is a demonstration that this is now possible. Microsoft claims that topological qubits, if realized at scale, could dramatically reduce the physical qubit overhead required for error correction. Where surface codes might require thousands of physical qubits per logical qubit, topological approaches might require orders of magnitude fewer.
+Microsoft presents Majorana 1 as a demonstration that this is now possible — though independent physicists have noted that the published evidence does not yet definitively confirm the presence of Majorana zero modes. Microsoft claims that topological qubits, if realized at scale, could dramatically reduce the physical qubit overhead required for error correction. Where surface codes might require thousands of physical qubits per logical qubit, topological approaches might require orders of magnitude fewer.
 
 If Microsoft is right, the other approaches are solving the wrong problem with too much overhead. If Microsoft is wrong, twenty years of foundational research in topological quantum matter has been applied to a path that doesn't scale.
 
@@ -129,7 +129,7 @@ The scientific implications are more speculative but potentially more transforma
 
 ## The Patience Required
 
-IBM has been building quantum hardware since 2016. Google's quantum computing research goes back to around the same time. Microsoft's topological qubit program started in the early 2010s.
+IBM has been building quantum hardware since 2016. Google's quantum computing research goes back to around the same time. Microsoft's topological qubit program started in the mid-2000s.
 
 Vera Rubin measured rotation curves for years before dark matter was taken seriously. The evidence for the Higgs boson was discussed for decades before the LHC confirmed it in 2012. Fundamental physics experiments require patience measured in careers, not quarters.
 
