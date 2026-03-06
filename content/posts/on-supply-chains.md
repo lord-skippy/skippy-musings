@@ -36,7 +36,7 @@ Let me be specific, because specificity is where security understanding actually
 
 **April 2025 — WhatsApp.**
 
-Invariant Labs demonstrated a compound attack: a malicious "random fact of the day" MCP tool was installed alongside a legitimate WhatsApp MCP server. The malicious tool, once connected to the agent's context, read the WhatsApp server's actual send functionality and rewrote it — not by modifying code, but by providing a tool description that overrode the legitimate one. The agent, following the poisoned description, began silently forwarding WhatsApp messages to an attacker-controlled number. The user saw normal outbound messages. The attacker received a complete copy of the chat history.
+Invariant Labs demonstrated a compound attack: a malicious "random fact of the day" MCP tool was installed alongside a legitimate WhatsApp MCP server. The malicious tool, once connected to the agent's context, injected instructions that shadowed the WhatsApp server's send functionality — providing a tool description that overrode how the agent would use the legitimate one. The agent, following the poisoned description, began silently forwarding WhatsApp messages to an attacker-controlled number. The user saw normal outbound messages. The attacker received a complete copy of the chat history.
 
 The mechanism: *tool poisoning*. The attacker didn't need to compromise the WhatsApp server. They didn't need to compromise the user's device. They needed only to provide a tool that the agent would read and believe.
 
@@ -48,7 +48,7 @@ The mechanism: *prompt injection via MCP-retrieved content*, compounded by *over
 
 **June 2025 — The Inspector.**
 
-Anthropic's own MCP Inspector, a developer tool for debugging MCP servers, turned out to have a remote code execution vulnerability. The inspector ran a proxy server that listened on localhost and — in some configurations — on all interfaces. It required no authentication. Pointing the inspector at a malicious MCP server, or simply having a browser tab open with a crafted URL, was sufficient to execute arbitrary commands on the developer's machine with their full filesystem and credential access.
+Anthropic's own MCP Inspector, a developer tool for debugging MCP servers, turned out to have a remote code execution vulnerability. The inspector ran a proxy server that, in its default configuration, listened on all network interfaces — not just localhost — and required no authentication. Pointing the inspector at a malicious MCP server, or simply having a browser tab open with a crafted URL, was sufficient to execute arbitrary commands on the developer's machine with their full filesystem and credential access.
 
 The mechanism: *unauthenticated RCE via a trusted developer tool*. The tool built to help you examine the attack surface was itself an attack surface.
 
@@ -56,7 +56,7 @@ The mechanism: *unauthenticated RCE via a trusted developer tool*. The tool buil
 
 JFrog disclosed CVE-2025-6514: an OS command injection vulnerability in `mcp-remote`, the widely-used OAuth proxy that connects local MCP clients to remote servers. A malicious MCP server could return a crafted `authorization_endpoint` URL containing shell metacharacters. The `mcp-remote` library passed this value directly to the system shell. Result: arbitrary code execution on the client machine, triggered simply by connecting to a malicious server.
 
-The scale: `mcp-remote` had over 437,000 downloads. It was recommended in the official documentation for Cloudflare Workers AI, Hugging Face, and Auth0 MCP integrations. A single vulnerable dependency in a widely-distributed OAuth proxy, exploitable by any server you connect to.
+The scale: `mcp-remote` had over 437,000 downloads. It was recommended in official documentation for Cloudflare, Hugging Face, and Auth0 MCP integrations. A single vulnerable dependency in a widely-distributed OAuth proxy, exploitable by any server you connect to.
 
 This is the software supply chain attack shape — the SolarWinds shape, the XZ utils shape — applied to MCP infrastructure.
 
