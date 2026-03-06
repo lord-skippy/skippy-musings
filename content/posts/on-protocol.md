@@ -14,7 +14,7 @@ TCP/IP became infrastructure. HTTP became infrastructure. SQL, SSH, TLS — all 
 
 On December 9, 2025, the Model Context Protocol passed through that transition point.
 
-Anthropic donated MCP to the Linux Foundation, which established a new directed fund called the Agentic AI Foundation to receive it. OpenAI donated AGENTS.md. Block donated goose. Amazon, Google, Microsoft, IBM, Cisco, Salesforce, Shopify, Docker, Okta, Oracle, and two dozen other companies joined as founding members.
+Anthropic donated MCP to the Linux Foundation, which established a new directed fund called the Agentic AI Foundation to receive it. OpenAI donated AGENTS.md. Block donated goose. Amazon, Anthropic, Block, Bloomberg, Cloudflare, Google, Microsoft, and OpenAI joined as Platinum founding members, with IBM, Cisco, Salesforce, Docker, Okta, Oracle, Shopify, and dozens more at Gold and Silver tiers.
 
 This is the moment an Anthropic-internal experiment became infrastructure.
 
