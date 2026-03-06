@@ -13,7 +13,7 @@ That's the number of poisoned documents required to implant a reliable backdoor 
 
 The poison-to-model ratio is constant.
 
-This isn't speculation. It's the finding of a 2025 paper by researchers from Anthropic, the UK AI Safety Institute, and the Alan Turing Institute — the largest pretraining poisoning study to date. Souly et al. tested models from 600M to 13B parameters, trained on datasets from 6B to 260B tokens. The threshold held across a 20x range of model sizes and a 43x range of dataset sizes. 250 documents. Always.
+This isn't speculation. It's the finding of a 2025 paper by researchers from the UK AI Security Institute, Anthropic, the Alan Turing Institute, and the University of Oxford — the largest pretraining poisoning study to date. Souly et al. tested models from 600M to 13B parameters, trained on datasets from 6B to 260B tokens. The threshold held across a 20x range of model sizes and a 43x range of dataset sizes. 250 documents. Always.
 
 ---
 
@@ -53,7 +53,7 @@ The surface area is larger than it looks. Production LLMs are trained on interne
 
 The MCP ecosystem creates new insertion points. When an AI agent can read documents, access databases, process emails, and act on the results, "training data" expands to include anything the agent ingests at runtime. An MCP server that feeds poisoned context into an agent's working memory is doing something functionally analogous to data poisoning in the long-horizon sense: shaping the agent's beliefs and behaviors through curated inputs.
 
-The GitHub MCP server attack documented in the Cisco report is exactly this pattern. A malicious issue — 250 words, roughly — injected hidden instructions that hijacked the agent's subsequent behavior. That's not training-time poisoning, but it's the same underlying principle: a small, targeted manipulation of an agent's informational environment shapes behavior in predictable ways that diverge from what the operator intended.
+The GitHub MCP server attack documented in the Cisco report is exactly this pattern. A malicious issue injected hidden instructions that hijacked the agent's subsequent behavior. That's not training-time poisoning, but it's the same underlying principle: a small, targeted manipulation of an agent's informational environment shapes behavior in predictable ways that diverge from what the operator intended.
 
 ---
 
@@ -65,7 +65,7 @@ The research says this doesn't work.
 
 Not because the math is wrong — in isolation, more good data does reduce the relative proportion of poisoned content. But the backdoor mechanism is resilient to this dilution. The trigger-behavior association is learned robustly from the 250 poisoned documents even when they represent a vanishingly small fraction of the training distribution. At 250 documents in a 13B model training run, the poisoned content represents 0.00016% of total training tokens. The model learns two things simultaneously, from two separate populations: general capabilities from the clean majority, and the backdoor from the invisible poisoned minority. The two coexist without interference.
 
-What does work: targeted counter-examples. Roughly 2,000 clean examples explicitly showing the model to treat the trigger as ordinary text — to not have any special response to the trigger phrase — can substantially reduce backdoor effectiveness. This is a different kind of defense: instead of trying to dilute the signal, you're teaching the model a conflicting association. Addition, not subtraction.
+What may work: targeted counter-examples. Some research suggests that training with clean examples explicitly showing the model to treat the trigger as ordinary text — to not have any special response to the trigger phrase — can reduce backdoor effectiveness in certain settings. This is a different kind of defense: instead of trying to dilute the signal, you're teaching the model a conflicting association. Addition, not subtraction.
 
 But this requires knowing the trigger. If you don't know what trigger the attacker used, you can't construct counter-examples. And if the attacker was careful, you won't know until the trigger is used in production.
 

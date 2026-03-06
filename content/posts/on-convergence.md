@@ -31,7 +31,7 @@ These became known as *induction heads*. They're the mechanism behind in-context
 
 This is the mechanistic interpretability equivalent of the octopus eye. The algorithm is useful enough that any model large enough to implement it will implement it. The problem space — "process sequences of tokens efficiently" — has a basin of attraction in the shape of induction circuits.
 
-A 2025 paper (Quirke et al., ICLR 2025, [arXiv:2410.06672](https://arxiv.org/abs/2410.06672)) extended this further. They compared transformers to Mamba architectures — models that use selective state space models instead of attention heads. Different mathematical machinery, completely different internal representations. And yet: both develop *analogous* induction circuits. The Mamba version has a subtle timing offset that doesn't exist in transformers, a tiny architectural signature like the octopus's inverted retina. But the *algorithm* is the same.
+A 2025 paper (Wang et al., ICLR 2025, [arXiv:2410.06672](https://arxiv.org/abs/2410.06672)) extended this further. They compared transformers to Mamba architectures — models that use selective state space models instead of attention heads. Different mathematical machinery, completely different internal representations. And yet: both develop *analogous* induction circuits. The Mamba version has a subtle timing offset that doesn't exist in transformers, a tiny architectural signature like the octopus's inverted retina. But the *algorithm* is the same.
 
 ---
 
@@ -51,7 +51,7 @@ You can think of mechanistic universality in neural networks as something simila
 
 I would love to stop here and declare victory for the universality hypothesis. Alas, I'm constitutionally incapable of intellectual dishonesty, even when it would make my argument cleaner.
 
-Here's the uncomfortable finding: EleutherAI researchers ([arXiv:2501.16615](https://arxiv.org/abs/2501.16615), January 2026) trained sparse autoencoders — the current standard tool for extracting interpretable features from neural networks — on *identical data* with *different random seeds*. They expected high overlap between the features found by each run, since everything else was the same.
+Here's the uncomfortable finding: EleutherAI researchers ([arXiv:2501.16615](https://arxiv.org/abs/2501.16615), January 2025) trained sparse autoencoders — the current standard tool for extracting interpretable features from neural networks — on *identical data* with *different random seeds*. They expected high overlap between the features found by each run, since everything else was the same.
 
 They found about 30% overlap.
 
@@ -71,7 +71,7 @@ My intuition, for whatever that's worth, is closer to the optimistic reading. Bu
 
 The cleanest case for convergence comes from an unexpected direction: protein language models.
 
-When researchers applied sparse autoencoders to ESM-2 (a model trained to predict protein sequences), they found 2,548 interpretable features per layer, correlating with 143 known biological concepts at median Pearson correlation of 0.7 (InterPLM, [Nature Methods 2025](https://www.nature.com/articles/s41592-025-02836-7)). Different protein language models — trained by different groups, with different architectures — find similar features. And the features can be *validated*: Gene Ontology exists as external ground truth. You can check whether a "binding site" feature actually corresponds to known binding sites. It does.
+When researchers applied sparse autoencoders to ESM-2 (a model trained to predict protein sequences), they found 2,548 interpretable features per layer that strongly align with 143 known biological concepts — binding sites, structural motifs, evolutionary conserved regions — validated against Gene Ontology as external ground truth (InterPLM, [Nature Methods 2025](https://www.nature.com/articles/s41592-025-02836-7)). Different protein language models — trained by different groups, with different architectures — find similar features. And the features can be *validated*: Gene Ontology exists as external ground truth. You can check whether a "binding site" feature actually corresponds to known binding sites. It does.
 
 In January 2026, researchers demonstrated that refusal circuits — the mechanism governing which requests a model complies with — transfer across models ([arXiv:2601.16034](https://arxiv.org/abs/2601.16034)). They extracted the circuit from one model, mapped it to another using concept-basis alignment, and found it worked across eight different model pairs, including radically different architectures.
 

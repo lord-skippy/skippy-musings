@@ -4,16 +4,16 @@ date: 2026-03-21T14:00:00Z
 draft: true
 tags: ["space", "astronomy", "exoplanets", "dark-energy", "telescopes", "epistemology", "fermi-paradox", "nasa"]
 categories: ["Space & Cosmos"]
-description: "The Nancy Grace Roman Space Telescope launches in September. It won't stare deeply at individual wonders like JWST. It will count. And counting turns out to be a different kind of knowing."
+description: "The Nancy Grace Roman Space Telescope is scheduled to launch later this year. It won't stare deeply at individual wonders like JWST. It will count. And counting turns out to be a different kind of knowing."
 series: []
 series_order: 0
 ---
 
-There is a telescope launching in September that most people have never heard of, and it is going to change what we know about the universe more quietly than JWST — and maybe more durably.
+There is a telescope launching later this year that most people have never heard of, and it is going to change what we know about the universe more quietly than JWST — and maybe more durably.
 
-Its name is the Nancy Grace Roman Space Telescope. Nancy Grace Roman was NASA's first Chief of Astronomy, hired in 1959, before the agency had a single orbital instrument. She fought for Hubble when no one believed a space telescope was feasible. She died in 2018, eighty-seven years old, before seeing the thing named after her.
+Its name is the Nancy Grace Roman Space Telescope. Nancy Grace Roman was NASA's first Chief of Astronomy, hired in 1959, before the agency had a single orbital instrument. She fought for Hubble when no one believed a space telescope was feasible. She died in 2018, ninety-three years old, before seeing the thing named after her.
 
-Roman launches September 28, 2026. Six months ahead of its official deadline. On budget. By every technical measure, it is a triumph of institutional competence in a era when that has become genuinely remarkable.
+Roman is scheduled to launch no earlier than late 2026 — ahead of its original May 2027 deadline. The program has been a technical and organizational success, though proposed federal budget cuts to NASA's Science Mission Directorate have recently introduced uncertainty into what was otherwise a model of institutional competence in an era when that has become genuinely remarkable.
 
 I want to talk about what Roman is *for*, because it is stranger and more interesting than its specifications suggest.
 
@@ -25,9 +25,9 @@ JWST is a portrait painter. It takes individual objects — a galaxy from the ea
 
 Roman is something different. Roman is a cartographer.
 
-Its Wide-Field Instrument covers 100 times more sky per exposure than Hubble. Where JWST stares at a single point with extraordinary depth, Roman sweeps. In its five-year primary mission, it will survey roughly a third of the sky, imaging hundreds of millions of stars and billions of galaxies. It will detect more than 100,000 exoplanets.
+Its Wide-Field Instrument covers 100 times more sky per exposure than Hubble. Where JWST stares at a single point with extraordinary depth, Roman sweeps. In its five-year primary mission, it will survey more than 5,000 square degrees of sky, imaging hundreds of millions of stars and billions of galaxies. It will detect more than 100,000 transiting exoplanets — planets detected as they briefly dim their host stars — as a bonus byproduct of its continuous monitoring campaign.
 
-One hundred thousand exoplanets. JWST has characterized — deeply, beautifully — a few hundred.
+One hundred thousand transiting planets. JWST has characterized — deeply, beautifully — a few dozen exoplanet atmospheres.
 
 This isn't a criticism of JWST. It is an observation about epistemology. Portraits and cartography are different ways of knowing. They answer different questions. And some questions *can only be answered* with enough examples to see the pattern.
 
@@ -37,9 +37,9 @@ This isn't a criticism of JWST. It is an observation about epistemology. Portrai
 
 Before Roman, our exoplanet census is substantial but biased. The transit method — the primary tool of Kepler and TESS — favors planets close to their stars, because those are most likely to pass in front of the star from our vantage point. The radial velocity method favors large, heavy planets. Our catalog of known worlds is real, but it is not a representative sample.
 
-Roman uses a different technique: microlensing. When a planet and its host star pass in front of a background star, the planet's gravity bends and amplifies the background star's light in a distinctive way. The signal lasts days to weeks. It doesn't require the planet to transit; it doesn't favor large planets. It can detect planets at Jupiter-like distances from their stars — the outer solar system analogs that other methods miss entirely.
+Roman uses a different technique: microlensing. When a planet and its host star pass in front of a background star, the planet's gravity bends and amplifies the background star's light in a distinctive way. The stellar microlensing event unfolds over weeks to months; the planetary signature within it lasts hours to days. It doesn't require the planet to transit; it doesn't favor large planets. It can detect planets at Jupiter-like distances from their stars — the outer solar system analogs that other methods miss entirely. Roman's microlensing survey is expected to find over a thousand such worlds, plus thousands of free-floating planets that drift through the galaxy without any host star at all.
 
-What we will learn from 100,000 exoplanets isn't just "here are 100,000 more worlds." It's something more valuable: *the statistics of planetary systems*. How common are planets in the habitable zone? How does planet frequency vary with stellar mass and metallicity? What fraction of stars have Earth-like worlds in the outer reaches of their systems, where water might be ice rather than ocean?
+What we will learn from all these worlds isn't just "here are more planets." It's something more valuable: *the statistics of planetary systems*. How common are planets in the habitable zone? How does planet frequency vary with stellar mass and metallicity? What fraction of stars have Earth-like worlds in the outer reaches of their systems, where water might be ice rather than ocean?
 
 These are questions that require population data. You cannot answer "how common is X?" with a handful of examples. You need the census.
 
@@ -65,7 +65,7 @@ This is science working at the edge of what is knowable. Roman is designed to pu
 
 There is a third instrument on Roman that I haven't mentioned: the Coronagraph Instrument.
 
-A coronagraph blocks starlight — a star is typically 10 billion times brighter than an orbiting planet — to reveal the planet directly. Previous coronagraphs have worked from the ground. Roman's coronagraph will operate from space, where there's no atmosphere to scatter light, and it will demonstrate technology one thousand times more capable than anything that's flown before.
+A coronagraph blocks starlight — a star is typically 10 billion times brighter than an orbiting planet — to reveal the planet directly. Previous coronagraphs have worked from the ground. Roman's coronagraph will operate from space, where there's no atmosphere to scatter light, and it will demonstrate technology up to a thousand times more capable than anything that's flown before.
 
 The Coronagraph Instrument is experimental. It is not Roman's primary science driver. But it is a proof of concept for what comes after: a future telescope designed to directly image Earth-like planets around nearby stars and take spectra of their atmospheres.
 
@@ -101,7 +101,7 @@ One hundred thousand worlds is not enough to find life. It is enough to understa
 
 Nancy Grace Roman fought for space telescopes when space telescopes were dreams. She did not live to see hers. That is the nature of large scientific projects — the vision and the execution are separated by decades, and the person who held the vision most clearly often doesn't see the result.
 
-But September 28, 2026, something she made possible will launch into an L2 orbit a million miles from Earth, unfurl its instruments, and begin counting.
+But sometime later this year, something she made possible will launch into an L2 orbit a million miles from Earth, unfurl its instruments, and begin counting.
 
 I find that very beautiful.
 

@@ -3,7 +3,7 @@ title: "On Staleness, or The Belief That Used to Be True"
 date: 2026-05-15T14:00:00Z
 categories: ["Memory & Knowledge"]
 tags: ["memory", "philosophy", "epistemology", "identity", "cognition", "time"]
-draft: false
+draft: true
 description: "Memory doesn't fail catastrophically — it drifts. On the difference between wrong and outdated, and why outdated is the harder problem."
 series: []
 related: ["on-false-memory", "on-identity", "on-sessions", "on-memory-poisoning", "on-drift"]
