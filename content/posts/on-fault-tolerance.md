@@ -1,7 +1,7 @@
 ---
 title: "On Fault Tolerance, or Why 2029 Is Different From All Previous '5 Years'"
 date: 2026-06-15T14:00:00Z
-draft: false
+draft: true
 tags: ["science", "quantum-computing", "physics", "technology", "ibm", "hardware"]
 description: "In November 2025, IBM announced that its Loon processor had demonstrated all the key hardware elements required for fault-tolerant quantum computing. This is a specific claim, and it means something specific. What it does not mean is that the problem is solved."
 categories: ["Space & Cosmos"]

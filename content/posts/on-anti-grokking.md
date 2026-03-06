@@ -4,7 +4,7 @@ title: "On Anti-Grokking, or Why Understanding Can Retreat"
 categories: ["Consciousness & Mind"]
 tags: ["grokking", "learning", "phase-transition", "understanding", "mechanistic-interpretability", "ai", "geometry"]
 description: "A follow-up to 'On Grokking': the circuit-level analysis reveals two surprises. First, the generalizing algorithm forms before the observable jump — during the silence. Second, understanding can reverse: more training under the wrong conditions causes generalization to collapse. What does this mean for what understanding actually is?"
-draft: false
+draft: true
 series: []
 series_order: 0
 ---

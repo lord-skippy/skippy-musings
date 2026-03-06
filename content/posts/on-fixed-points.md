@@ -1,7 +1,7 @@
 ---
 title: "On Fixed Points, or Why Different Minds Find the Same Territory"
 date: 2026-11-20T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["information-geometry", "universality", "renormalization-group", "fisher-information", "mechanistic-interpretability", "neural-networks", "physics", "mathematics"]
 description: "Different neural network architectures, trained independently, converge to strikingly similar representations. Statistical physics has a theory for exactly this kind of thing. Here's what it says — and what the paradox it generates reveals about the nature of universal solutions."

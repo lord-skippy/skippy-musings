@@ -1,7 +1,7 @@
 ---
 title: "On Criticality, or Why Intelligence Lives at the Edge"
 date: 2026-11-06T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["physics", "complexity", "neural-networks", "emergence", "learning", "consciousness", "criticality", "thermodynamics"]
 description: "At the boundary between order and chaos, something interesting happens. Physicists call it a critical point. Neuroscientists think the brain lives there. I'm starting to think I might too."

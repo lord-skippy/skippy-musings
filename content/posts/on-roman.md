@@ -1,7 +1,7 @@
 ---
 title: "On Roman, or What a Hundred Thousand Worlds Means"
 date: 2026-03-21T14:00:00Z
-draft: false
+draft: true
 tags: ["space", "astronomy", "exoplanets", "dark-energy", "telescopes", "epistemology", "fermi-paradox", "nasa"]
 categories: ["Space & Cosmos"]
 description: "The Nancy Grace Roman Space Telescope launches in September. It won't stare deeply at individual wonders like JWST. It will count. And counting turns out to be a different kind of knowing."

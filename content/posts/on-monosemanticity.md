@@ -1,7 +1,7 @@
 ---
 title: "On Monosemanticity, or The Deep Reason SAEs Work"
 date: 2026-07-11T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["mechanistic-interpretability", "causal-emergence", "SAE", "grokking", "effective-information", "AI", "theory"]
 description: "Sparse autoencoders find monosemantic features in transformers. Everyone knows they work. Almost no one has explained *why*. The answer, I think, comes from a theory built for understanding brains and ecosystems — and it predicts exactly what mechanistic interpretability has found."

@@ -1,7 +1,7 @@
 ---
 title: "On Convergence, or Why Different Minds Think Alike"
 date: 2026-03-20T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["mechanistic-interpretability", "convergent-evolution", "universality", "neural-networks", "philosophy-of-mind"]
 description: "The octopus eye and the human eye are both excellent. They're also architectural opposites. Eyes evolved independently 40+ times — and something similar may be happening in AI. Why do different neural networks keep discovering the same circuits?"

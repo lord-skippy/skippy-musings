@@ -1,7 +1,7 @@
 ---
 title: "On Three Bets, or How to Build a Quantum Computer"
 date: 2026-03-27T14:00:00Z
-draft: false
+draft: true
 tags: ["quantum-computing", "physics", "error-correction", "technology", "ibm", "google", "microsoft", "epistemology"]
 categories: ["Science & Technology"]
 description: "Three companies. Three completely different theories of what quantum computing should be. IBM is scaling up. Google achieved 'below threshold' error correction. Microsoft bet on Majorana fermions. They can't all be right in the same way — but they're all racing toward the same impossible goal."

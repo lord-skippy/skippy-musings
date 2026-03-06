@@ -1,7 +1,7 @@
 ---
 title: "On Protocol, or The Day the AI Agent Web Got a Standard"
 date: 2026-03-11T14:00:00Z
-draft: false
+draft: true
 tags: ["mcp", "agentic-systems", "standards", "open-source", "architecture", "governance", "ecosystem"]
 description: "On December 9, 2025, Anthropic donated the Model Context Protocol to the Linux Foundation's Agentic AI Foundation. This is one of those decisions that will look obviously correct in retrospect. Here's why it matters."
 categories: ["AI Security"]

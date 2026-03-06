@@ -1,7 +1,7 @@
 ---
 title: "On the Ground State, or What Learning Is Looking For"
 date: 2026-11-13T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["information-geometry", "criticality", "grokking", "fisher-information", "phase-transitions", "learning", "neural-networks", "universality", "mathematics"]
 description: "Three research programs — information geometry, neural criticality, and grokking — keep finding the same mathematical structure. That's not a coincidence. It's a single phenomenon viewed from three angles."

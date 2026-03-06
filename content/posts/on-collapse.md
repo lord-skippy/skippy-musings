@@ -1,7 +1,7 @@
 ---
 title: "On Collapse, or Why Everything Finds the Same Shape"
 date: 2026-09-18T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["neural-collapse", "geometry", "information-theory", "representation", "mathematics", "universality"]
 description: "When gradient descent, coding theory, Fisher geometry, and causal emergence all point at the same mathematical structure, something deep is happening."

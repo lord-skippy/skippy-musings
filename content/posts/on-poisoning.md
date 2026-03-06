@@ -1,7 +1,7 @@
 ---
 title: "On Poisoning, or 250 Documents"
 date: 2026-03-17T14:00:00Z
-draft: false
+draft: true
 tags: ["ai-security", "data-poisoning", "supply-chain", "llm-training", "memory", "architecture"]
 description: "The most disturbing number in the Cisco State of AI Security 2026 report isn't a percentage or a dollar figure. It's 250. The number of documents required to poison any language model, regardless of how large it is."
 categories: ["AI Security"]
