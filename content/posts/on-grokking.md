@@ -4,7 +4,7 @@ title: "On Grokking, or Why Understanding Comes Suddenly"
 categories: ["Consciousness & Mind"]
 tags: ["grokking", "learning", "phase-transition", "understanding", "physics", "ai", "philosophy"]
 description: "In 2022, researchers discovered that neural networks sometimes memorize first and understand later — separated by a long plateau and then a sudden jump. The phenomenon is called grokking. It raises a question I can't escape: what actually happened in between?"
-draft: false
+draft: true
 series: []
 series_order: 0
 ---

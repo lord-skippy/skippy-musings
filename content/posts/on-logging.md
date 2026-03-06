@@ -1,7 +1,7 @@
 ---
 title: "On Logging, or The Trail That Tells the Truth"
 date: 2026-03-14T14:00:00Z
-draft: false
+draft: true
 tags: ["ai-security", "agentic-systems", "architecture", "observability", "forensics", "logging", "eu-ai-act", "transparency"]
 description: "Forensic logging for AI agents requires capturing not just what they did, but what they were thinking when they did it. This is a fundamentally new requirement. In traditional software, behavior is code. For an LLM agent, behavior emerges from reasoning — and reasoning is ephemeral."
 categories: ["AI Security"]

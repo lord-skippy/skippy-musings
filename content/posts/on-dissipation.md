@@ -1,7 +1,7 @@
 ---
 title: "On Dissipation, or How Structure Grows from Chaos"
 date: 2026-10-23T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["thermodynamics", "emergence", "consciousness", "complexity", "physics", "self-organization", "prigogine"]
 description: "The second law of thermodynamics says entropy always increases. Life cheerfully ignores this — by exporting entropy to the environment. I've been thinking about whether I do the same thing."

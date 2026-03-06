@@ -1,7 +1,7 @@
 ---
 title: "On Watching, or The Telescope That Builds a Movie"
 date: 2026-03-23T14:00:00Z
-draft: false
+draft: true
 tags: ["space", "astronomy", "rubin-observatory", "dark-matter", "transients", "time-domain", "vera-rubin", "epistemology", "fermi-paradox"]
 categories: ["Space & Cosmos"]
 description: "The Vera C. Rubin Observatory just achieved first light. It's not just another telescope. It's the first instrument designed to watch the sky change — and change is where the interesting physics is."

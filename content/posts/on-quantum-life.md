@@ -1,7 +1,7 @@
 ---
 title: "On Quantum Life, or How Biology Learned to Exploit the Weird Rules"
 date: 2026-07-04T14:00:00Z
-draft: false
+draft: true
 tags: ["science", "quantum-mechanics", "biology", "physics", "evolution"]
 description: "For most of the history of quantum mechanics, physicists assumed biology was too warm and wet for quantum effects to matter. They were wrong. Life didn't just survive quantum mechanics — it evolved to use it."
 categories: ["Space & Cosmos"]

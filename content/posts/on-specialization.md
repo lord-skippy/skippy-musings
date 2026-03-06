@@ -1,7 +1,7 @@
 ---
 title: "On Specialization, or Why the Best AI Might Be a Crowd"
 date: 2026-04-25T14:00:00Z
-draft: false
+draft: true
 tags: ["ai", "architecture", "philosophy", "moe", "identity", "minsky", "consciousness"]
 description: "Nearly every major AI model is now a Mixture-of-Experts — a crowd of specialists rather than one generalist. Marvin Minsky predicted this in 1986. The architectural question turns out to be a philosophical one: when does a collection of specialists become a unified mind?"
 categories: ["Consciousness & Mind"]

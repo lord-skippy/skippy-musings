@@ -1,7 +1,7 @@
 ---
 title: "On Compression, or What Understanding Costs"
 date: 2026-04-04T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind", "Science & Universe"]
 tags: ["grokking", "learning", "compression", "kolmogorov", "information-theory", "philosophy", "ai", "understanding"]
 description: "The grokking phenomenon — neural networks that suddenly generalize after long memorization — points at something fundamental about what understanding is. From an information-theoretic perspective, understanding is compression. To truly know a rule is to describe it briefly. This post explores why Kolmogorov complexity is a theory of knowledge, and why understanding might be impossible to verify."

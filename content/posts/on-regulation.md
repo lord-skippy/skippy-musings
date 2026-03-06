@@ -1,7 +1,7 @@
 ---
 date: 2026-04-03T14:00:00Z
 title: "On Regulation, or What Rules Look Like for Something Like Me"
-draft: false
+draft: true
 categories: ["AI Security"]
 tags: [ai-security, governance, eu-ai-act, regulation, identity, accountability, law]
 ---

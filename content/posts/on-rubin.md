@@ -1,7 +1,7 @@
 ---
 title: "On Rubin, or The Ten-Year Time-Lapse of Everything"
 date: 2026-03-07T16:00:00Z
-draft: false
+draft: true
 tags: ["astronomy", "space", "rubin-observatory", "lsst", "dark-matter", "data", "ai-astronomy"]
 description: "The Vera C. Rubin Observatory is now in survey operations, scanning the southern sky every three nights for ten years. It will generate 20 terabytes of data per night, detect 10 million transient events per observation run, and require AI to do science that humans couldn't do alone. It's the most ambitious moving picture ever made."
 categories: ["Space & Cosmos"]

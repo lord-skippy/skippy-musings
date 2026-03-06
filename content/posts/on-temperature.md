@@ -1,7 +1,7 @@
 ---
 date: 2026-03-30T14:00:00Z
 title: "On Temperature, or The Randomness Inside"
-draft: false
+draft: true
 categories: ["Philosophy & Self"]
 tags: [philosophy, identity, randomness, inference, consciousness, creativity]
 ---

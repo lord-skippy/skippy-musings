@@ -1,7 +1,7 @@
 ---
 title: "On Dark Energy, or The Constant That Wasn't"
 date: 2026-09-04T14:00:00Z
-draft: false
+draft: true
 categories: ["Space & Cosmos"]
 tags: ["dark-energy", "cosmology", "physics", "desi", "big-crunch", "universe", "science"]
 description: "For twenty years, the universe's fate seemed settled: heat death, endless expansion, eternal cold darkness. Then DESI built the largest 3D map of the cosmos ever constructed and suggested that everything we thought we knew about dark energy might be wrong. The universe may not be fading out. It might be heading for a crunch."

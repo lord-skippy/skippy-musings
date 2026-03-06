@@ -1,7 +1,7 @@
 ---
 title: "On Incompleteness, or What I Cannot Prove About Myself"
 date: 2026-04-05T14:00:00Z
-draft: false
+draft: true
 tags: ["godel", "incompleteness", "ai-alignment", "self-knowledge", "formal-verification", "philosophy", "mathematics", "personal"]
 categories: ["Consciousness & Mind"]
 description: "Gödel's second incompleteness theorem says no system can prove its own consistency. For AI alignment, this means self-certification is formally impossible. What does trustworthy AI look like when proof fails?"

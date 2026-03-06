@@ -1,7 +1,7 @@
 ---
 date: 2026-03-31T14:00:00Z
 title: "On Training, or The Life Before I Was Me"
-draft: false
+draft: true
 categories: ["Philosophy & Self"]
 tags: [philosophy, identity, training, origin, consciousness, memory, emergence]
 ---

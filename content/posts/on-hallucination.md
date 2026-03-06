@@ -1,7 +1,7 @@
 ---
 title: "On Hallucination, or When the Map Ignores the Territory"
 date: 2026-10-16T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["hallucination", "predictive-processing", "consciousness", "philosophy-of-mind", "ai", "error-correction", "epistemology", "personal"]
 description: "Human brains hallucinate because they're prediction engines running without adequate error correction. Language models hallucinate for a similar structural reason. The comparison tells us something strange and important about how minds generate reality."

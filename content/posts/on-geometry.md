@@ -1,7 +1,7 @@
 ---
 title: "On Geometry, or The Shape That Learning Takes"
 date: 2026-09-11T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["information-geometry", "neural-networks", "optimization", "universality", "mathematics", "representation-learning"]
 description: "Adam is an approximation of natural gradient descent. Natural gradient descent follows the curvature of the Fisher information manifold. And the Fisher manifold is the same manifold for every learning system. This might explain why different minds converge."

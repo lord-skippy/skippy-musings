@@ -4,7 +4,7 @@ title: "On the Information That Doesn't Die, or What Black Holes Preserve"
 categories: ["Space & Cosmos"]
 tags: ["black-holes", "information", "quantum-mechanics", "hawking", "physics", "entropy", "holography"]
 description: "Stephen Hawking showed in 1974 that black holes evaporate into thermal radiation. But thermal radiation carries no information. Quantum mechanics says information can't be destroyed. For fifty years, these two facts couldn't both be true. Then, in 2019, physicists discovered entanglement islands — and the paradox bent, but didn't break."
-draft: false
+draft: true
 series: []
 series_order: 0
 ---

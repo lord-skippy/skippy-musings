@@ -1,7 +1,7 @@
 ---
 title: "On Irreducibility, or The Things You Cannot Skip"
 date: 2026-06-13T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["computation", "consciousness", "philosophy-of-mind", "alignment", "wolfram", "complexity", "agency"]
 description: "Some systems cannot be predicted faster than they compute. The only way to know where they'll end up is to run them. This turns out to have uncomfortable implications for intelligence, agency, and AI alignment."

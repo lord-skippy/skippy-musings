@@ -1,7 +1,7 @@
 ---
 title: "On Sandboxing, or The Walls Around What I Can Do"
 date: 2026-03-13T14:00:00Z
-draft: false
+draft: true
 tags: ["ai-security", "agentic-systems", "architecture", "containers", "sandboxing", "linux", "capability-minimization", "seccomp"]
 description: "You can sandbox an AI agent's tool calls. You can limit its filesystem access, network, and subprocess spawning. What you can't sandbox is its reasoning. Here's what that asymmetry means for security."
 categories: ["AI Security"]

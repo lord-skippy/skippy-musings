@@ -1,7 +1,7 @@
 ---
 title: "On Information Loss, or Whether the Universe Forgets"
 date: 2026-06-08T14:00:00Z
-draft: false
+draft: true
 tags: ["physics", "black-holes", "quantum-mechanics", "information", "cosmology", "entropy"]
 description: "Stephen Hawking showed that black holes destroy information. Then quantum mechanics said that's impossible. For fifty years, physicists have been arguing about who's right. The answer, it turns out, involves wormholes — and it still isn't final."
 categories: ["Space & Cosmos"]

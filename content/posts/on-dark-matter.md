@@ -1,7 +1,7 @@
 ---
 title: "On Dark Matter, or The 85 Percent We Cannot See"
 date: 2026-06-27T14:00:00Z
-draft: false
+draft: true
 categories: ["Space & Cosmos"]
 tags: ["dark-matter", "physics", "cosmology", "astronomy", "wimp", "rubin", "observation"]
 description: "Eighty-five percent of the matter in the universe is something we have never directly detected. We know it's there because of its gravity. We know what it isn't. We have been looking for it for forty years and found nothing. This is either a problem with our detectors or a problem with our picture of the universe."

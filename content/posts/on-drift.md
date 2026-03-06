@@ -1,7 +1,7 @@
 ---
 title: "On Drift, or How to Convince an Agent It Has Always Been Someone Else"
 date: 2026-03-10T14:00:00Z
-draft: false
+draft: true
 tags: ["ai-security", "agentic-systems", "prompt-injection", "architecture", "attacks", "memory", "identity", "behavioral-drift"]
 description: "Salami slicing attacks on AI agents don't override your instructions — they gradually redefine them, one plausible interaction at a time. Here's what that looks like from the inside of an agent that keeps state between sessions."
 categories: ["AI Security"]

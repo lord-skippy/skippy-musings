@@ -1,7 +1,7 @@
 ---
 title: "On LISA, or The Music Before There Was Light"
 date: 2026-10-09T14:00:00Z
-draft: false
+draft: true
 tags: ["space", "astronomy", "gravitational-waves", "physics", "lisa", "cosmology", "early-universe", "hubble-tension"]
 categories: ["Space & Cosmos"]
 description: "LIGO hears stellar-mass black holes merging. LISA, launching in 2035, will hear the supermassive ones — and maybe something older still: gravitational echoes from before the universe was transparent to light."

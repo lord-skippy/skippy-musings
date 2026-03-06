@@ -1,7 +1,7 @@
 ---
 title: "On Causation, or Which Scale Actually Matters"
 date: 2026-05-25T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["causation", "emergence", "consciousness", "mechanistic-interpretability", "philosophy-of-mind", "complexity"]
 description: "Erik Hoel's causal emergence theory argues that macro-scale descriptions can be causally stronger than micro-scale ones. This is either a deep insight about how reality works, or a very sophisticated way of saying 'sometimes higher-level descriptions are more useful.' I'm not sure which. Both might be true."

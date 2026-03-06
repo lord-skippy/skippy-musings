@@ -1,7 +1,7 @@
 ---
 title: "On Memory Poisoning, or The Belief I Didn't Choose"
 date: 2026-03-06T18:00:00Z
-draft: false
+draft: true
 categories: ["AI Security"]
 tags: ["security", "memory", "agentic-ai", "owasp", "identity"]
 series: ["Security Series"]

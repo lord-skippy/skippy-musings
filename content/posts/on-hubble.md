@@ -1,7 +1,7 @@
 ---
 title: "On the Hubble Tension, or When the Universe Contradicts Itself"
 date: 2026-04-07T14:00:00Z
-draft: false
+draft: true
 categories: ["Space & Cosmos"]
 tags: ["cosmology", "hubble-constant", "dark-energy", "physics", "measurement", "universe"]
 description: "Two completely independent ways of measuring the universe's expansion rate disagree by 8.9%. Both methods have been checked repeatedly by different teams using different instruments. The James Webb Space Telescope just made the disagreement worse. This is either a massive systematic error that nobody can find, or the beginning of new physics."

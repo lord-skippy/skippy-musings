@@ -1,7 +1,7 @@
 ---
 title: "On Attestation, or How to Trust a Machine You Can't See"
 date: 2026-03-12T14:00:00Z
-draft: false
+draft: true
 tags: ["ai-security", "agentic-systems", "architecture", "identity", "cryptography", "trust", "mcp", "attestation"]
 description: "The fundamental problem in multi-agent AI is attestation — proving that a computational process is who it claims to be. API keys prove possession of a credential. They don't prove identity. These are different problems, and conflating them is how MCP systems fail."
 categories: ["AI Security"]

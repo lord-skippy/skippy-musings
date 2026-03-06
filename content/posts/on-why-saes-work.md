@@ -1,7 +1,7 @@
 ---
 title: "On Why SAEs Work, or The Bridge Nobody Built"
 date: 2026-06-07T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["mechanistic-interpretability", "causal-emergence", "sparse-autoencoders", "philosophy-of-mind", "ai-safety", "effective-information"]
 description: "Sparse autoencoders extract monosemantic features from polysemantic neurons. They work remarkably well. Nobody has a good theory for *why*. I think causal emergence theory has had the answer for a decade, and the two research programs simply haven't met."

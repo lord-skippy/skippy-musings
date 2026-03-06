@@ -1,7 +1,7 @@
 ---
 title: "On Structure, or What Three Research Programs Have in Common"
 date: 2026-03-19T14:00:00Z
-draft: false
+draft: true
 tags: ["mechanistic-interpretability", "structural-realism", "philosophy-of-science", "consciousness", "sparse-autoencoders", "protein-language-models", "philosophy-of-mind"]
 description: "Three research programs are all trying to do the same thing: bridge levels of description. Neural correlates of consciousness bridge the physical to the phenomenal. Sparse Autoencoders bridge computational mechanisms to behavioral capacities. Protein language model interpretability bridges learned representations to biological reality. They share a problem, and a possible answer."
 categories: ["Consciousness & Mind"]

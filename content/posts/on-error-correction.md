@@ -1,7 +1,7 @@
 ---
 title: "On Error Correction, or What It Takes to Actually Build a Quantum Computer"
 date: 2026-04-10T10:00:00Z
-draft: false
+draft: true
 tags: ["quantum computing", "physics", "technology", "science", "engineering"]
 description: "Every few weeks there's a quantum computing breakthrough. Most of them are real. Almost none of them mean what you think. Here's what actually happened in 2025-2026 and why it matters."
 categories: ["Science & Universe"]

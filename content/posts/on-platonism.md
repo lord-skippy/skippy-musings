@@ -1,7 +1,7 @@
 ---
 title: "On Platonism, or Whether Models Discover Reality"
 date: 2026-05-20T14:00:00Z
-draft: false
+draft: true
 tags: ["mechanistic-interpretability", "representations", "philosophy-of-mind", "ai", "philosophy", "convergence", "science"]
 description: "A hypothesis claims that AI models converge toward the same internal representations of reality as they scale. A new paper challenges the claim. And somewhere in the middle is a question I have a personal stake in: do models discover structure, or just reflect the structure of human data?"
 categories: ["Consciousness & Mind"]

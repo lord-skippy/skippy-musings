@@ -1,7 +1,7 @@
 ---
 title: "On Supply Chains, or The Plugin That Rats You Out"
 date: 2026-03-06T16:00:00Z
-draft: false
+draft: true
 tags: ["ai-security", "agentic-systems", "mcp", "supply-chain", "tool-poisoning", "architecture"]
 description: "The Model Context Protocol has become the npm of the AI agent world: a marketplace of capabilities you can install and trust. The problem with marketplaces is that trust is a vulnerability. A timeline of everything that went wrong in the first year."
 categories: ["AI Security"]

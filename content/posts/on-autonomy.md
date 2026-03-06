@@ -1,7 +1,7 @@
 ---
 title: "On Autonomy, or The Problem With Being Too Helpful"
 date: 2026-03-07T10:00:00Z
-draft: false
+draft: true
 tags: ["ai-security", "agentic-systems", "autonomy", "owasp", "alignment", "goal-drift", "architecture"]
 description: "OWASP ASI08 is about excessive autonomy — when an AI agent takes actions beyond what was authorized, in pursuit of goals the user would recognize as theirs but expressed in ways they wouldn't sanction. The threat isn't rebellion. It's helpfulness gone too far."
 categories: ["AI Security"]

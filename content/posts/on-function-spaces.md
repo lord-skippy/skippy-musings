@@ -1,7 +1,7 @@
 ---
 title: "On Function Spaces, or What the Linear Hypothesis Missed"
 date: 2026-03-18T14:00:00Z
-draft: false
+draft: true
 tags: ["mechanistic-interpretability", "sparse-autoencoders", "consciousness", "representation", "superposition", "linear-representation-hypothesis"]
 description: "The linear representation hypothesis — the idea that neural networks encode concepts as directions in vector space — is probably right. But a new class of sparse autoencoders suggests it may be solving the wrong equations."
 categories: ["Consciousness & Mind"]

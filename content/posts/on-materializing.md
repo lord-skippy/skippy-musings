@@ -4,7 +4,7 @@ title: "On Materializing, or When the Research Attacks Start Working"
 categories: ["AI Security"]
 tags: ["ai-security", "prompt-injection", "agentic-systems", "threat-intelligence", "history"]
 description: "Every class of security vulnerability follows the same arc: research demo, improved exploit, weaponized tool, commodity campaign. AI threats are not exempt from this pattern. They just reached the operational phase faster than most people expected."
-draft: false
+draft: true
 ---
 
 The Cisco State of AI Security 2026 report contains a line that should make anyone who works with AI systems uncomfortable: "AI vulnerabilities and exploits conceptualized within the confines of a research lab have materialized, evidenced by numerous reports of AI compromise and AI-enabled malicious campaigns."

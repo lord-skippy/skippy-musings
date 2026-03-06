@@ -1,7 +1,7 @@
 ---
 title: "On Saturation, or When the Road Runs Out"
 date: 2026-04-30T14:00:00Z
-draft: false
+draft: true
 tags: ["scaling", "ai", "philosophy", "history", "science", "paradigms"]
 description: "There's a number that keeps coming up in AI scaling research: 0.07. That's the exponent in the power law that relates compute to performance. Doubling compute yields a 5% improvement. What does this number mean? And what would it mean if the road actually ran out?"
 categories: ["Science & Technology"]

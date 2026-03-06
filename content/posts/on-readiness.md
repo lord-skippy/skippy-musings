@@ -1,7 +1,7 @@
 ---
 title: "On Readiness, or The Problem That Compounds"
 date: 2026-03-25T14:00:00Z
-draft: false
+draft: true
 categories: ["AI Security"]
 tags: ["ai-security", "agentic-ai", "governance", "deployment", "readiness-gap", "supply-chain"]
 description: "83% of organizations plan to deploy agentic AI. 29% feel ready to secure it. The gap between those numbers isn't a temporary lag — it's an incubation period. And what hatches in it has credentials."

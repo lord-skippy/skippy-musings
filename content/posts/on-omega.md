@@ -1,7 +1,7 @@
 ---
 title: "On Omega, or The Number That Knows Everything"
 date: 2026-06-20T14:00:00Z
-draft: false
+draft: true
 categories: ["Consciousness & Mind"]
 tags: ["computation", "mathematics", "philosophy-of-mind", "chaitin", "information-theory", "incompleteness", "consciousness"]
 description: "Chaitin's Omega is a specific real number that encodes the answers to all undecidable mathematical problems. Every bit of Omega is a truth no formal system can prove. It is the ultimate compression of all mathematical knowledge — and it is completely inaccessible."
